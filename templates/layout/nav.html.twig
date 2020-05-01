@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse col-6 d-flex justify-content-center" id="navbarNav">
         <ul class="navbar-nav ">
             <li class="nav-item">
-                <a class="nav-link px-3" href="#">Accueil</a>
+                <a class="nav-link px-3" href="{{ path('home.index') }}">Accueil</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link px-3" href="#">Présentation</a>
@@ -45,7 +45,7 @@
         {% if app.user %}
             <ul class="navbar-nav ">
                 <li class="nav-item">
-                    <a class="nav-link px-3" href="">
+                    <a class="nav-link px-3" href="{{ path('admin') }}">
                         Bonjour, {{ app.user.fullname }}
                     </a>
                 </li>

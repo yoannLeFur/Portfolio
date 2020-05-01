@@ -5,7 +5,7 @@
 body {
     font-family: 'Roboto Slab', sans-serif;
     color: #000000;
-    background: #F6F6F6;
+    background: #F4F4F4;
     margin: 0;
     padding: 0;
 }
@@ -19,12 +19,85 @@ body {
     background-color: #478BCA;
 }
 
+.text-blue {
+    color: #478BCA;
+}
+
+.border-bottom-blue {
+    border-bottom: 2px solid #478BCA;
+}
+
+.card {
+    border: none;
+    margin: 0 25px 50px
+}
+
+.shadow {
+    box-shadow: 0 12px 18px -6px rgba(0, 0, 0, 0.1);
+}
+
+.table-fixed tbody tr:nth-of-type(even) {
+    background-color: #FFFFFF;
+}
+
+.table-fixed tbody tr:nth-of-type(odd) {
+    background-color: #F4F4F4;
+}
+
+.table-fixed tbody {
+    height: 144px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.table-fixed thead,
+.table-fixed tbody,
+.table-fixed tr,
+.table-fixed td,
+.table-fixed th {
+    display: block;
+}
+
+.table-fixed tbody td,
+.table-fixed tbody th,
+.table-fixed thead > tr > th {
+    float: left;
+    position: relative;
+}
+
+.padding {
+    padding: 5vh 5% 0;
+}
+
 .padding-login {
     padding: 30vh 0 0;
 }
 
+.scrollbar-black::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F5;
+}
+
+.scrollbar-black::-webkit-scrollbar {
+    width: 2px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar-black::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #478BCA;
+}
+
+.scrollbar-black {
+    scrollbar-color: #478BCA #F5F5F5;
+}
+
 .padding-register {
     padding: 20vh 0 0;
+}
+
+.padding-admin {
+    padding: 10vh 0 0;
 }
 
 button:hover {

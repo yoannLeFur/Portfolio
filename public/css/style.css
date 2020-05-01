@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', sans-serif;
+    color: #000000;
+    background: #F6F6F6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 2rem;
+    margin: 0;
+}
+
+.bg-blue {
+    background-color: #478BCA;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #454545;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    color: #454545;
+}
+
+li:hover {
+    background-color: #A9A9A9;
+}
+
+#home {
+    background: url(../image/backgroundpc.jpeg) no-repeat;
+    background-position: top 20% left 20%;
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 5rem 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #home {
+        height: 100vh;
+    }
+}

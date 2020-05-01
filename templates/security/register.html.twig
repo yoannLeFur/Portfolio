@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title "S'inscrire" %}
+
+{% block body %}
+    <div class="offset-0 col-12 offset-lg-4 col-lg-4 padding-register">
+        <h2 class="text-center">Inscription</h2>
+
+        {{ form_start(form) }}
+        <div class="row form-group">
+            <div class="col-12">{{ form_row(form.firstname) }}</div>
+        </div>
+        <div class="row form-group">
+            <div class="col-12">{{ form_row(form.lastname) }}</div>
+        </div>
+        <div class="row form-group">
+            <div class="col-12">{{ form_row(form.username) }}</div>
+        </div>
+        <div class="row form-group">
+            <div class="col-12">{{ form_row(form.password) }}</div>
+        </div>
+        {{ form_rest(form) }}
+        <div class="text-center">
+            <button class="btn btn-md bg-blue text-white">Enregistrer</button>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

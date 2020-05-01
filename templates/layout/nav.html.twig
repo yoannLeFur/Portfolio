@@ -1,27 +1,63 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-blue p-0">
-    <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-blue p-0">
+    <div class="collapse navbar-collapse col-3 d-flex justify-content-start" id="navbarNav">
+        {% if app.user %}
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="{{ path('logout') }}"><i class="fa fa-sign-out fa-rotate-180" aria-hidden="true" ></i></a>
+                </li>
+            </ul>
+        {% endif %}
+        {% if not app.user %}
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a href="{{ path('login') }}"
+                       class="nav-link px-3"><i class="fa fa-user"></i></a>
+                </li>
+            </ul>
+        {% endif %}
+    </div>
+    <div class="collapse navbar-collapse col-6 d-flex justify-content-center" id="navbarNav">
         <ul class="navbar-nav ">
             <li class="nav-item">
-                <a class="nav-link" href="#">Accueil</a>
+                <a class="nav-link px-3" href="#">Accueil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Présentation</a>
+                <a class="nav-link px-3" href="#">Présentation</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Projets</a>
+                <a class="nav-link px-3" href="#">Projets</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Formation</a>
+                <a class="nav-link px-3" href="#">Formation</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Compétences</a>
+                <a class="nav-link px-3" href="#">Compétences</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Expériences</a>
+                <a class="nav-link px-3" href="#">Expériences</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link px-3" href="#">Contact</a>
             </li>
         </ul>
     </div>
-</nav>
+    <div class="collapse navbar-collapse col-3 d-flex justify-content-end" id="navbarNav">
+        {% if app.user %}
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="">
+                        Bonjour, {{ app.user.fullname }}
+                    </a>
+                </li>
+            </ul>
+        {% endif %}
+        {% if not app.user %}
+        <ul class="navbar-nav ">
+            <li class="nav-item">
+                <a href="https://www.linkedin.com/in/yoann-le-fur-86249a15b/"
+                   class="nav-link px-3"><i class="fa fa-linkedin"></i></a>
+            </li>
+        </ul>
+        {% endif %}
+    </div>
+</div>

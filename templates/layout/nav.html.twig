@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-blue p-0">
-    <div class="collapse navbar-collapse col-3 d-flex justify-content-start" id="navbarNav">
+    <div class="navbarNav collapse navbar-collapse col-3 d-flex justify-content-start">
         {% if app.user %}
             <ul class="navbar-nav ">
                 <li class="nav-item">
@@ -16,7 +16,7 @@
             </ul>
         {% endif %}
     </div>
-    <div class="collapse navbar-collapse col-6 d-flex justify-content-center" id="navbarNav">
+    <div class="navbarNav collapse navbar-collapse col-6 d-flex justify-content-center">
         <ul class="navbar-nav ">
             <li class="nav-item">
                 <a class="nav-link px-3" href="{{ path('home.index') }}">Accueil</a>
@@ -41,7 +41,7 @@
             </li>
         </ul>
     </div>
-    <div class="collapse navbar-collapse col-3 d-flex justify-content-end" id="navbarNav">
+    <div class="navbarNav collapse navbar-collapse col-3 d-flex justify-content-end">
         {% if app.user %}
             <ul class="navbar-nav ">
                 <li class="nav-item">

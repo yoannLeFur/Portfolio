@@ -14,123 +14,6 @@ body {
     min-height: 72.6vh;
 }
 
-.btn-blue,
-.bg-blue {
-    background-color: #478BCA;
-}
-
-.text-blue {
-    color: #478BCA;
-}
-
-.border-bottom-blue {
-    border-bottom: 2px solid #478BCA;
-}
-
-.card {
-    border: none;
-    margin: 0 25px 50px
-}
-
-.shadow {
-    box-shadow: 0 12px 18px -6px rgba(0, 0, 0, 0.1);
-}
-
-.table-fixed-2 tbody tr:nth-of-type(even),
-.table-fixed tbody tr:nth-of-type(even) {
-    background-color: #FFFFFF;
-}
-
-.table-fixed-2  tbody tr:nth-of-type(odd),
-.table-fixed tbody tr:nth-of-type(odd) {
-    background-color: #F4F4F4;
-}
-
-.table-fixed tbody {
-    height: 144px;
-    overflow-y: auto;
-    width: 100%;
-}
-
-.table-fixed-2  tbody {
-    height: 300px;
-    overflow-y: auto;
-    width: 100%;
-}
-
-.table-fixed thead,
-.table-fixed tbody,
-.table-fixed tr,
-.table-fixed td,
-.table-fixed th,
-.table-fixed-2 thead,
-.table-fixed-2 tbody,
-.table-fixed-2 tr,
-.table-fixed-2 td,
-.table-fixed-2 th {
-    display: block;
-}
-
-.table-fixed tbody td,
-.table-fixed tbody th,
-.table-fixed thead > tr > th,
-.table-fixed-2 tbody td,
-.table-fixed-2 tbody th,
-.table-fixed-2 thead > tr > th {
-    float: left;
-    position: relative;
-}
-
-.table-fixed-2  tbody {
-    height: 300px;
-    overflow-y: auto;
-    width: 100%;
-}
-
-.padding {
-    padding: 5vh 5% 0;
-}
-
-.padding-login {
-    padding: 30vh 0 0;
-}
-
-.padding-home-page {
-    padding: 15vh 0 0;
-}
-
-.scrollbar-black::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-    background-color: #F5F5F5;
-}
-
-.scrollbar-black::-webkit-scrollbar {
-    width: 2px;
-    background-color: #F5F5F5;
-}
-
-.scrollbar-black::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-    background-color: #478BCA;
-}
-
-.scrollbar-black {
-    scrollbar-color: #478BCA #F5F5F5;
-}
-
-.padding-register {
-    padding: 20vh 0 0;
-}
-
-.padding-admin {
-    padding: 10vh 0 0;
-}
-
-a:hover,
-button:hover {
-    background-color: #A9A9A9;
-}
-
 h1,
 h2 {
     text-align: center;
@@ -159,6 +42,50 @@ p {
 
 li:hover {
     background-color: #A9A9A9;
+}
+
+a:hover,
+button:hover {
+    background-color: #A9A9A9;
+}
+
+.btn-blue,
+.bg-blue {
+    background-color: #478BCA;
+}
+
+.text-blue {
+    color: #478BCA;
+}
+
+.border-bottom-blue {
+    border-bottom: 2px solid #478BCA;
+}
+
+.shadow {
+    box-shadow: 0 12px 18px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* padding */
+
+.padding {
+    padding: 5vh 5% 0;
+}
+
+.padding-login {
+    padding: 30vh 0 0;
+}
+
+.padding-home-page {
+    padding: 15vh 0 0;
+}
+
+.padding-register {
+    padding: 20vh 0 0;
+}
+
+.padding-admin {
+    padding: 10vh 0 0;
 }
 
 
@@ -227,6 +154,66 @@ li:hover {
 }
 
 
+
+/* admin */
+.card {
+    border: none;
+    margin: 0 25px 50px
+}
+
+/* table */
+
+.table-height-contact,
+.table-height-experience,
+
+.table-height-contact,
+.table-height-experience,
+.table-height-skill,
+.table-height-projet,
+.table-height-formation {
+    max-height: 200px;
+}
+
+.table-fixed tbody tr:nth-child(even) {
+    background-color: #FFFFFF;
+}
+
+.table-fixed tbody tr:nth-child(odd) {
+    background-color: #F4F4F4;
+}
+
+.table-fixed tbody {
+    overflow-y: auto;
+    width: 100%;
+}
+
+.table-fixed tbody td,
+.table-fixed tbody th,
+.table-fixed thead > tr > th {
+    float: left;
+    position: relative;
+}
+
+.scrollbar-black::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F5;
+}
+
+.scrollbar-black::-webkit-scrollbar {
+    width: 2px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar-black::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #478BCA;
+}
+
+.scrollbar-black {
+    scrollbar-color: #478BCA #F5F5F5;
+}
+
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 
@@ -245,6 +232,6 @@ li:hover {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     #home {
-        height: 100vh;
-    }
+             height: 100vh;
+         }
 }

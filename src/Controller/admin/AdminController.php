@@ -4,15 +4,12 @@
 namespace App\Controller\admin;
 
 
-use App\Entity\PortfolioAbout;
-use App\Entity\PortfolioHome;
-use App\Form\HomeType;
 use App\Repository\PortfolioAboutRepository;
 use App\Repository\PortfolioAdminRepository;
+use App\Repository\PortfolioFormationRepository;
 use App\Repository\PortfolioHomeRepository;
 use App\Repository\PortfolioProjetRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -38,15 +35,22 @@ class AdminController extends AbstractController
      */
     private $portfolioProjetRepository;
 
+    /**
+     * @var PortfolioFormationRepository
+     */
+    private $portfolioFormationRepository;
+
     public function __construct(PortfolioAdminRepository $portfolioAdminRepository,
                                 PortfolioHomeRepository $portfolioHomeRepository,
                                 PortfolioAboutRepository $portfolioAboutRepository,
-                                PortfolioProjetRepository $portfolioProjetRepository)
+                                PortfolioProjetRepository $portfolioProjetRepository,
+                                PortfolioFormationRepository $portfolioFormationRepository)
     {
         $this->portfolioAdminRepository = $portfolioAdminRepository;
         $this->portfolioHomeRepository = $portfolioHomeRepository;
         $this->portfolioAboutRepository = $portfolioAboutRepository;
         $this->portfolioProjetRepository = $portfolioProjetRepository;
+        $this->portfolioFormationRepository = $portfolioFormationRepository;
     }
 
     /**
@@ -57,11 +61,13 @@ class AdminController extends AbstractController
     {
         $homes = $this->portfolioHomeRepository->findAll();
         $abouts = $this->portfolioAboutRepository->findAll();
+        $formations = $this->portfolioFormationRepository->findAll();
         $projets = $this->portfolioProjetRepository->findAll();
         return $this->render('page/admin.html.twig', [
             "homes" => $homes,
             "abouts" => $abouts,
-            "projets" => $projets
+            "formations" => $formations,
+            "projets" => $projets,
         ]);
     }
 

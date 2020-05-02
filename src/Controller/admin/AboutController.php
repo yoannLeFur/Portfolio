@@ -31,7 +31,7 @@ class AboutController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    public function createHome(Request $request): Response
+    public function new(Request $request): Response
     {
         $about = new PortfolioAbout();
         $form = $this->createForm(AboutType::class, $about);

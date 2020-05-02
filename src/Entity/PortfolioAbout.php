@@ -10,7 +10,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PortfolioAboutRepository")
- *  * @Vich\Uploadable
+ * @Vich\Uploadable
  */
 class PortfolioAbout
 {

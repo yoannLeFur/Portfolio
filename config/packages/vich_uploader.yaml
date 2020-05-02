@@ -23,8 +23,13 @@ vich_uploader:
             namer: Vich\UploaderBundle\Naming\UniqidNamer
 
         skill_image:
-            uri_prefix: /images/skill_image
-            upload_destination: '%kernel.project_dir%/public/images/skill_image'
+            uri_prefix: /images/skill
+            upload_destination: '%kernel.project_dir%/public/images/skill'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+
+        experience_image:
+            uri_prefix: /images/experience
+            upload_destination: '%kernel.project_dir%/public/images/experience'
             namer: Vich\UploaderBundle\Naming\UniqidNamer
     #mappings:
     #    products:

@@ -36,10 +36,12 @@ body {
     box-shadow: 0 12px 18px -6px rgba(0, 0, 0, 0.1);
 }
 
+.table-fixed-2 tbody tr:nth-of-type(even),
 .table-fixed tbody tr:nth-of-type(even) {
     background-color: #FFFFFF;
 }
 
+.table-fixed-2  tbody tr:nth-of-type(odd),
 .table-fixed tbody tr:nth-of-type(odd) {
     background-color: #F4F4F4;
 }
@@ -50,19 +52,39 @@ body {
     width: 100%;
 }
 
+.table-fixed-2  tbody {
+    height: 300px;
+    overflow-y: auto;
+    width: 100%;
+}
+
 .table-fixed thead,
 .table-fixed tbody,
 .table-fixed tr,
 .table-fixed td,
-.table-fixed th {
+.table-fixed th,
+.table-fixed-2 thead,
+.table-fixed-2 tbody,
+.table-fixed-2 tr,
+.table-fixed-2 td,
+.table-fixed-2 th {
     display: block;
 }
 
 .table-fixed tbody td,
 .table-fixed tbody th,
-.table-fixed thead > tr > th {
+.table-fixed thead > tr > th,
+.table-fixed-2 tbody td,
+.table-fixed-2 tbody th,
+.table-fixed-2 thead > tr > th {
     float: left;
     position: relative;
+}
+
+.table-fixed-2  tbody {
+    height: 300px;
+    overflow-y: auto;
+    width: 100%;
 }
 
 .padding {

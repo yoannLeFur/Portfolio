@@ -4,8 +4,10 @@
 namespace App\Controller\admin;
 
 
+use App\Entity\PortfolioAbout;
 use App\Entity\PortfolioHome;
 use App\Form\HomeType;
+use App\Repository\PortfolioAboutRepository;
 use App\Repository\PortfolioAdminRepository;
 use App\Repository\PortfolioHomeRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -25,10 +27,16 @@ class AdminController extends AbstractController
      */
     private $portfolioHomeRepository;
 
-    public function __construct(PortfolioAdminRepository $portfolioAdminRepository, PortfolioHomeRepository $portfolioHomeRepository )
+    /**
+     * @var PortfolioAboutRepository
+     */
+    private $portfolioAboutRepository;
+
+    public function __construct(PortfolioAdminRepository $portfolioAdminRepository, PortfolioHomeRepository $portfolioHomeRepository, PortfolioAboutRepository $portfolioAboutRepository )
     {
         $this->portfolioAdminRepository = $portfolioAdminRepository;
         $this->portfolioHomeRepository = $portfolioHomeRepository;
+        $this->portfolioAboutRepository = $portfolioAboutRepository;
     }
 
     /**
@@ -38,8 +46,10 @@ class AdminController extends AbstractController
     public function index(): Response
     {
         $homes = $this->portfolioHomeRepository->findAll();
+        $abouts = $this->portfolioAboutRepository->findAll();
         return $this->render('page/admin.html.twig', [
-            "homes" => $homes
+            "homes" => $homes,
+            "abouts" => $abouts
         ]);
     }
 

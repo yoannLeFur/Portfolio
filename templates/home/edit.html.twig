@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block title 'Home > édition' %}
+
+{% block body %}
+    <div class="offset-0 col-12 offset-lg-4 col-lg-4 padding-home-page">
+        <h2>Editer les informations</h2>
+
+        {{ form_start(form) }}
+        <div class="row">
+            <div class="col-md-12">{{ form_row(form.imageFile) }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">{{ form_row(form.title) }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">{{ form_row(form.content, { 'attr': {'rows': 7} }) }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">{{ form_row(form.file) }}</div>
+        </div>
+        {{ form_rest(form) }}
+        <div class="text-center">
+            <button class="btn btn-primary btn-lg">{{ button|default('Editer') }}</button>
+        </div
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

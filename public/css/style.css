@@ -19,6 +19,96 @@ body {
     background-color: #478BCA;
 }
 
+.text-blue {
+    color: #478BCA;
+}
+
+.border-bottom-blue {
+    border-bottom: 2px solid #478BCA;
+}
+
+.card {
+    border: none;
+    margin: 0 25px 50px
+}
+
+.shadow {
+    box-shadow: 0 12px 18px -6px rgba(0, 0, 0, 0.1);
+}
+
+.table-fixed tbody tr:nth-of-type(even) {
+    background-color: #FFFFFF;
+}
+
+.table-fixed tbody tr:nth-of-type(odd) {
+    background-color: #F4F4F4;
+}
+
+.table-fixed tbody {
+    height: 144px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.table-fixed thead,
+.table-fixed tbody,
+.table-fixed tr,
+.table-fixed td,
+.table-fixed th {
+    display: block;
+}
+
+.table-fixed tbody td,
+.table-fixed tbody th,
+.table-fixed thead > tr > th {
+    float: left;
+    position: relative;
+}
+
+.padding {
+    padding: 5vh 5% 0;
+}
+
+.padding-login {
+    padding: 30vh 0 0;
+}
+
+.padding-home-page {
+    padding: 15vh 0 0;
+}
+
+.scrollbar-black::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F5;
+}
+
+.scrollbar-black::-webkit-scrollbar {
+    width: 2px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar-black::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #478BCA;
+}
+
+.scrollbar-black {
+    scrollbar-color: #478BCA #F5F5F5;
+}
+
+.padding-register {
+    padding: 20vh 0 0;
+}
+
+.padding-admin {
+    padding: 10vh 0 0;
+}
+
+a:hover,
+button:hover {
+    background-color: #A9A9A9;
+}
+
 h1,
 h2 {
     text-align: center;
@@ -44,6 +134,8 @@ li:hover {
     background-color: #A9A9A9;
 }
 
+
+/* Home */
 #home {
     background: url(../image/backgroundpc.jpeg) no-repeat;
     background-position: top 20% left 20%;
@@ -54,6 +146,57 @@ li:hover {
     padding: 5rem 0 0;
     display: flex;
     flex-direction: column;
+}
+
+#home img {
+    display: flex;
+    justify-content: center;
+    border: 3px solid #478bca;
+    border-radius: 1000px;
+    margin: 0 auto;
+    object-fit: cover;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: all 0.3s ease-in-out 0s;
+    box-shadow: 2px 2px 3px #000000;
+}
+
+#home img:hover {
+    cursor: pointer;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#home h1,
+#home h2 {
+    color: #ffffff;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+/* button */
+
+.button {
+    display: flex;
+    justify-content: center;
+    background: rgba(71, 139, 202, 0.8);
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #A9A9A9;
+    font-size: 1.3rem;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    transition: all 0.5s;
+}
+
+.button:hover {
+    background: #478bca;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: all 0.3s;
 }
 
 

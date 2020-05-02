@@ -6,6 +6,7 @@ namespace App\Controller\admin;
 
 use App\Repository\PortfolioAboutRepository;
 use App\Repository\PortfolioAdminRepository;
+use App\Repository\PortfolioExperienceRepository;
 use App\Repository\PortfolioFormationRepository;
 use App\Repository\PortfolioHomeRepository;
 use App\Repository\PortfolioProjetRepository;
@@ -40,17 +41,24 @@ class AdminController extends AbstractController
      */
     private $portfolioFormationRepository;
 
+    /**
+     * @var PortfolioExperienceRepository
+     */
+    private $portfolioExperienceRepository;
+
     public function __construct(PortfolioAdminRepository $portfolioAdminRepository,
                                 PortfolioHomeRepository $portfolioHomeRepository,
                                 PortfolioAboutRepository $portfolioAboutRepository,
                                 PortfolioProjetRepository $portfolioProjetRepository,
-                                PortfolioFormationRepository $portfolioFormationRepository)
+                                PortfolioFormationRepository $portfolioFormationRepository,
+                                PortfolioExperienceRepository $portfolioExperienceRepository)
     {
         $this->portfolioAdminRepository = $portfolioAdminRepository;
         $this->portfolioHomeRepository = $portfolioHomeRepository;
         $this->portfolioAboutRepository = $portfolioAboutRepository;
         $this->portfolioProjetRepository = $portfolioProjetRepository;
         $this->portfolioFormationRepository = $portfolioFormationRepository;
+        $this->portfolioExperienceRepository = $portfolioExperienceRepository;
     }
 
     /**
@@ -63,11 +71,13 @@ class AdminController extends AbstractController
         $abouts = $this->portfolioAboutRepository->findAll();
         $formations = $this->portfolioFormationRepository->findAll();
         $projets = $this->portfolioProjetRepository->findAll();
+        $expriences = $this->portfolioExperienceRepository->findAll();
         return $this->render('page/admin.html.twig', [
             "homes" => $homes,
             "abouts" => $abouts,
             "formations" => $formations,
             "projets" => $projets,
+            "experiences" => $expriences,
         ]);
     }
 

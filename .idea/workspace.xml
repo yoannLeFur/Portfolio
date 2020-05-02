@@ -2,52 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4592da2e-0f31-4e18-828e-0de22d9075ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/admin/FormationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/FormationType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/formation/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/formation/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/admin/ExperienceController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ExperienceType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/experience/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/experience/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/backgroundpc.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/backgroundpc.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/empty.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/empty.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/android-icon-144x144.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/android-icon-144x144.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/android-icon-192x192.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/android-icon-192x192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/android-icon-36x36.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/android-icon-36x36.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/android-icon-48x48.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/android-icon-48x48.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/android-icon-72x72.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/android-icon-72x72.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/android-icon-96x96.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/android-icon-96x96.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/apple-icon-114x114.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/apple-icon-114x114.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/apple-icon-120x120.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/apple-icon-120x120.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/apple-icon-144x144.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/apple-icon-144x144.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/apple-icon-152x152.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/apple-icon-152x152.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/apple-icon-180x180.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/apple-icon-180x180.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/apple-icon-57x57.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/apple-icon-57x57.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/apple-icon-60x60.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/apple-icon-60x60.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/apple-icon-72x72.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/apple-icon-72x72.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/apple-icon-76x76.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/apple-icon-76x76.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/apple-icon-precomposed.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/apple-icon-precomposed.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/apple-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/apple-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/browserconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/browserconfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/favicon-16x16.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/favicon-16x16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/favicon-32x32.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/favicon-32x32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/favicon-96x96.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/favicon-96x96.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/ms-icon-144x144.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/ms-icon-144x144.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/ms-icon-150x150.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/ms-icon-150x150.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/ms-icon-310x310.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/ms-icon-310x310.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/ico/ms-icon-70x70.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ico/ms-icon-70x70.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/PortfolioAbout.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PortfolioAbout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/PortfolioExperience.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PortfolioExperience.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/PortfolioFormation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PortfolioFormation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/PortfolioHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PortfolioHome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/PortfolioSkill.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PortfolioSkill.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page/about.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/about.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/page/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/home.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -225,7 +187,7 @@
       <updated>1588338167732</updated>
       <workItem from="1588338168901" duration="2491000" />
       <workItem from="1588364860513" duration="13671000" />
-      <workItem from="1588430307887" duration="8298000" />
+      <workItem from="1588430307887" duration="10067000" />
     </task>
     <servers />
   </component>

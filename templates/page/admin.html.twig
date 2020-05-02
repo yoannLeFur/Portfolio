@@ -17,8 +17,7 @@
                         <tr>
                             <th scope="col" class="col-2">Image</th>
                             <th scope="col" class="col-2">Titre</th>
-                            <th scope="col" class="col-4">Contenu</th>
-                            <th scope="col" class="col-2">Cv</th>
+                            <th scope="col" class="col-6">Contenu</th>
                             <th scope="col" class="col-2">
                                 <a href="{{ path('admin.home.create') }}" class="btn btn-sm btn-outline-success"
                                    title="Ajouter"><i class="fa fa-plus" aria-hidden="true"></i></a>
@@ -40,8 +39,7 @@
                                     {% endif %}
                                 </td>
                                 <td class="col-2">{{ home.title }}</td>
-                                <td class="col-4">{{ home.content }}</td>
-                                <td class="col-2">{{ home.file }}</td>
+                                <td class="col-6">{{ home.content }}</td>
                                 <td class="col-2">
                                     <a href="{{ path('admin.home.edit', {id: home.id }) }}" class="btn btn-sm btn-outline-primary"><i
                                                 class="fa fa-pencil" aria-hidden="true"></i></a>
@@ -75,90 +73,66 @@
                         </tr>
                         </thead>
                         <tbody class="scrollbar scrollbar-black bordered-black square thin">
-                        <tr>
-                            <th scope="row" class="col-1">1</th>
-                            <td class="col-3">Mark</td>
-                            <td class="col-3">Otto</td>
-                            <td class="col-5">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">1</th>
-                            <td class="col-3">Mark</td>
-                            <td class="col-3">Otto</td>
-                            <td class="col-5">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="card shadow ">
+            <div class="col-12">
+                <div class="card shadow">
                     <div class="card-header font-weight-bold bg-white text-blue border-bottom-blue text-center px-3 py-2">
                         Présentation
                     </div>
-                    <table class="table table-fixed table-borderless table-responsive-xl text-center bg-white m-0">
+                    <table class="table table-fixed-2 table-borderless table-responsive-xl text-center bg-white m-0">
                         <thead>
                         <tr>
-                            <th scope="col" class="col-1"></th>
-                            <th scope="col" class="col-3">Image</th>
-                            <th scope="col" class="col-3">Titre</th>
-                            <th scope="col" class="col-5">contenu</th>
+                            <th scope="col" class="col-1">Image</th>
+                            <th scope="col" class="col-1">Titre</th>
+                            <th scope="col" class="col-3">Contenu</th>
+                            <th scope="col" class="col-3">Contenu 1</th>
+                            <th scope="col" class="col-3">Contenu 2</th>
+                            <th scope="col" class="col-1">
+                                <a href="{{ path('admin.about.create') }}" class="btn btn-sm btn-outline-success"
+                                   title="Ajouter"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                            </th>
                         </tr>
                         </thead>
                         <tbody class="scrollbar scrollbar-black bordered-black square thin">
-                        <tr>
-                            <th scope="row" class="col-1">1</th>
-                            <td class="col-3">Mark</td>
-                            <td class="col-3">Otto</td>
-                            <td class="col-5">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">1</th>
-                            <td class="col-3">Mark</td>
-                            <td class="col-3">Otto</td>
-                            <td class="col-5">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
+                        {% for about in abouts %}
+                            <tr>
+                                <td class="col-1">
+                                    {% if about.filename %}
+                                        <img class="img-fluid rounded pb-2"
+                                             src="{{ vich_uploader_asset(about, 'imageFile') | imagine_filter('small') }}"
+                                             alt="card-img-top">
+                                    {% else %}
+                                        <img class="img-fluid rounded pb-2"
+                                             src="{{ 'image/no-image.png' | imagine_filter('small') }}"
+                                             alt="card-img-top">
+                                    {% endif %}
+                                </td>
+                                <td class="col-1">{{ about.title }}</td>
+                                <td class="col-3 text-left">{{ about.content }}</td>
+                                <td class="col-3 text-left">{{ about.content1 }}</td>
+                                <td class="col-3 text-left">{{ about.content2 }}</td>
+                                <td class="col-1">
+                                    <a href="{{ path('admin.about.edit', {id: about.id }) }}" class="btn btn-sm btn-outline-primary"><i
+                                                class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <form method="post" action="{{ path('admin.about.delete', {id: about.id}) }}"
+                                          style="display: inline-block"
+                                          onsubmit="return confirm('Etes-vous sur de vouloir supprimer ces informations?')">
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ about.id) }}">
+                                        <button class="btn btn-sm btn-outline-danger"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
                         </tbody>
                     </table>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-6">
                 <div class="card shadow ">
                     <div class="card-header font-weight-bold bg-white text-blue border-bottom-blue text-center px-3 py-2">
                         Formation
@@ -173,41 +147,11 @@
                         </tr>
                         </thead>
                         <tbody class="scrollbar scrollbar-black bordered-black square thin">
-                        <tr>
-                            <th scope="row" class="col-1">1</th>
-                            <td class="col-3">Mark</td>
-                            <td class="col-3">Otto</td>
-                            <td class="col-5">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">1</th>
-                            <td class="col-3">Mark</td>
-                            <td class="col-3">Otto</td>
-                            <td class="col-5">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-6">
                 <div class="card shadow ">
                     <div class="card-header font-weight-bold bg-white text-blue border-bottom-blue text-center px-3 py-2">
                         Projets
@@ -222,36 +166,6 @@
                         </tr>
                         </thead>
                         <tbody class="scrollbar scrollbar-black bordered-black square thin">
-                        <tr>
-                            <th scope="row" class="col-1">1</th>
-                            <td class="col-3">Mark</td>
-                            <td class="col-3">Otto</td>
-                            <td class="col-5">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">1</th>
-                            <td class="col-3">Mark</td>
-                            <td class="col-3">Otto</td>
-                            <td class="col-5">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -271,36 +185,6 @@
                         </tr>
                         </thead>
                         <tbody class="scrollbar scrollbar-black bordered-black square thin">
-                        <tr>
-                            <th scope="row" class="col-1">1</th>
-                            <td class="col-3">Mark</td>
-                            <td class="col-3">Otto</td>
-                            <td class="col-5">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">1</th>
-                            <td class="col-3">Mark</td>
-                            <td class="col-3">Otto</td>
-                            <td class="col-5">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -320,36 +204,6 @@
                         </tr>
                         </thead>
                         <tbody class="scrollbar scrollbar-black bordered-black square thin">
-                        <tr>
-                            <th scope="row" class="col-1">1</th>
-                            <td class="col-3">Mark</td>
-                            <td class="col-3">Otto</td>
-                            <td class="col-5">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">1</th>
-                            <td class="col-3">Mark</td>
-                            <td class="col-3">Otto</td>
-                            <td class="col-5">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="col-1">2</th>
-                            <td class="col-3">Jacob</td>
-                            <td class="col-3">Thornton</td>
-                            <td class="col-5">@fat</td>
-                        </tr>
                         </tbody>
                     </table>
                 </div>

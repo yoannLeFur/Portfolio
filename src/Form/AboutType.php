@@ -3,7 +3,7 @@
 
 namespace App\Form;
 
-use App\Entity\PortfolioHome;
+use App\Entity\PortfolioAbout;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -11,7 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class HomeType extends AbstractType
+class AboutType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -22,13 +22,20 @@ class HomeType extends AbstractType
                     'required' => false,
                 ])
             ->add('title', TextType::class)
-            ->add('content', TextareaType::class);
+            ->add('content', TextareaType::class)
+            ->add('content_1', TextareaType::class, [
+                'required'   => false,
+            ])
+            ->add('content_2', TextareaType::class, [
+                'required'   => false,
+            ]);
+
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => PortfolioHome::class,
+            'data_class' => PortfolioAbout::class,
             'translation_domain' => 'forms'
         ));
     }

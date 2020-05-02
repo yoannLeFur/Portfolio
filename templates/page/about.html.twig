@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block title 'Portfolio > Présentation' %}
+
+{% block body %}
+    <div class="offset-0 col-12 offset-lg-2 col-lg-8">
+        {% for about in abouts %}
+            <div class="text-center padding-home-page">
+                {% if about.filename %}
+                    <img class="img-fluid rounded-circle p-0"
+                         src="{{ vich_uploader_asset(about, 'imageFile') | imagine_filter('small') }}"
+                         alt="card-img-top">
+                {% else %}
+                    <img class="img-fluid rounded pb-2"
+                         src="{{ 'image/no-image.png' | imagine_filter('small') }}"
+                         alt="card-img-top">
+                {% endif %}
+            </div>
+            <div class="text-center pt-5">
+                <p>{{ about.content }}</p>
+                <p>{{ about.content1 }}</p>
+                <p>{{ about.content2 }}</p>
+                <p>{{ about.title }}</p>
+                <a class="btn btn-sm bg-blue text-white my-4" style="width: 200px" href="#">Me contacter</a>
+                <a class="btn btn-sm bg-blue text-white my-4" style="width: 200px" href="{{ path('download.file') }}">CV</a>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

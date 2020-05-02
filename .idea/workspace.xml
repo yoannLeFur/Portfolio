@@ -2,23 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4592da2e-0f31-4e18-828e-0de22d9075ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/image/empty.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/HomeType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Portfolio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/page/about.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/PortfolioHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PortfolioHome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AboutType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AboutType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/HomeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/HomeType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/layout/nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/nav.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/page/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/home.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,17 +151,17 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/image" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Controller\admin" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Form" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\image" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\translations" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Form" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Controller\admin" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\image" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\translations" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Form" />
@@ -195,6 +192,7 @@
       <updated>1588338167732</updated>
       <workItem from="1588338168901" duration="2491000" />
       <workItem from="1588364860513" duration="13671000" />
+      <workItem from="1588430307887" duration="1960000" />
     </task>
     <servers />
   </component>

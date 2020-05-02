@@ -16,8 +16,9 @@
                         <thead>
                         <tr>
                             <th scope="col" class="col-2">Image</th>
-                            <th scope="col" class="col-3">Titre</th>
-                            <th scope="col" class="col-5">contenu</th>
+                            <th scope="col" class="col-2">Titre</th>
+                            <th scope="col" class="col-4">Contenu</th>
+                            <th scope="col" class="col-2">Cv</th>
                             <th scope="col" class="col-2">
                                 <a href="{{ path('admin.home.create') }}" class="btn btn-sm btn-outline-success"
                                    title="Ajouter"><i class="fa fa-plus" aria-hidden="true"></i></a>
@@ -27,19 +28,20 @@
                         <tbody class="scrollbar scrollbar-black bordered-black square thin">
                         {% for home in homes %}
                             <tr>
-                                <td class="col-3">
+                                <td class="col-2">
                                     {% if home.filename %}
                                         <img class="img-fluid rounded pb-2"
-                                             src="{{ vich_uploader_asset(home, 'imageFile') | imagine_filter('thumb') }}"
+                                             src="{{ vich_uploader_asset(home, 'imageFile') | imagine_filter('small') }}"
                                              alt="card-img-top">
                                     {% else %}
                                         <img class="img-fluid rounded pb-2"
-                                             src="{{ 'image/no-image.png' | imagine_filter('thumb') }}"
+                                             src="{{ 'image/no-image.png' | imagine_filter('small') }}"
                                              alt="card-img-top">
                                     {% endif %}
                                 </td>
-                                <td class="col-3">{{ home.title }}</td>
-                                <td class="col-5">{{ home.content }}</td>
+                                <td class="col-2">{{ home.title }}</td>
+                                <td class="col-4">{{ home.content }}</td>
+                                <td class="col-2">{{ home.file }}</td>
                                 <td class="col-2">
                                     <a href="{{ path('admin.home.edit', {id: home.id }) }}" class="btn btn-sm btn-outline-primary"><i
                                                 class="fa fa-pencil" aria-hidden="true"></i></a>

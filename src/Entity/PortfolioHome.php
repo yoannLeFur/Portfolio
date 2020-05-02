@@ -3,9 +3,14 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PortfolioHomeRepository")
+ * @Vich\Uploadable
  */
 class PortfolioHome
 {
@@ -32,9 +37,17 @@ class PortfolioHome
     private $file;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string|null
+     * @ORM\Column(type="string", length=255)
      */
-    private $image;
+    private $filename;
+
+    /**
+     * @var File|null
+     * @Assert\Image(mimeTypes="image/jpeg")
+     * @Vich\UploadableField(mapping="home_image", fileNameProperty="filename")
+     */
+    private $imageFile;
 
     public function getId(): ?int
     {
@@ -77,15 +90,45 @@ class PortfolioHome
         return $this;
     }
 
-    public function getImage(): ?string
+    /**
+     * @return string|null
+     */
+    public function getFilename(): ?string
     {
-        return $this->image;
+        return $this->filename;
     }
 
-    public function setImage(string $image): self
+    /**
+     * @param string|null $filename
+     * @return PortfolioHome
+     */
+    public function setFilename(?string $filename): PortfolioHome
     {
-        $this->image = $image;
-
+        $this->filename = $filename;
         return $this;
     }
+
+    /**
+     * @return File|null
+     */
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * @param File|null $imageFile
+     * @return PortfolioHome
+     * @throws \Exception
+     */
+    public function setImageFile(?File $imageFile): PortfolioHome
+    {
+        $this->imageFile = $imageFile;
+        if ($this->imageFile instanceof UploadedFile) {
+            $this->updated_at = new \DateTime('now');
+        }
+        return $this;
+    }
+
+
 }

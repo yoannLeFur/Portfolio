@@ -11,6 +11,11 @@ vich_uploader:
             uri_prefix: /images/about
             upload_destination: '%kernel.project_dir%/public/images/about'
             namer: Vich\UploaderBundle\Naming\UniqidNamer
+
+        projet_image:
+            uri_prefix: /images/projet
+            upload_destination: '%kernel.project_dir%/public/images/projet'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
     #mappings:
     #    products:
     #        uri_prefix: /images/products

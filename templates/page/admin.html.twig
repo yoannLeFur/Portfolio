@@ -3,7 +3,7 @@
 
 {% block body %}
     <div class="padding-admin">
-        <h1 class="text-blue">Administration</h1>
+        <h1  >Administration</h1>
     </div>
     <div class="padding">
         <div class="row">
@@ -159,13 +159,47 @@
                     <table class="table table-fixed table-borderless table-responsive-xl text-center bg-white m-0">
                         <thead>
                         <tr>
-                            <th scope="col" class="col-1"></th>
-                            <th scope="col" class="col-3">Image</th>
-                            <th scope="col" class="col-3">Titre</th>
-                            <th scope="col" class="col-5">contenu</th>
+                            <th scope="col" class="col-2">Image</th>
+                            <th scope="col" class="col-2">Titre</th>
+                            <th scope="col" class="col-4">contenu</th>
+                            <th scope="col" class="col-2">Url</th>
+                            <th scope="col" class="col-2">
+                                <a href="{{ path('admin.projet.create') }}" class="btn btn-sm btn-outline-success"
+                                   title="Ajouter"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                            </th>
                         </tr>
                         </thead>
                         <tbody class="scrollbar scrollbar-black bordered-black square thin">
+                        {% for projet in projets %}
+                            <tr>
+                                <td class="col-2">
+                                    {% if projet.filename %}
+                                        <img class="img-fluid rounded pb-2"
+                                             src="{{ vich_uploader_asset(projet, 'imageFile') | imagine_filter('small') }}"
+                                             alt="card-img-top">
+                                    {% else %}
+                                        <img class="img-fluid rounded pb-2"
+                                             src="{{ 'image/no-image.png' | imagine_filter('small') }}"
+                                             alt="card-img-top">
+                                    {% endif %}
+                                </td>
+                                <td class="col-2">{{ projet.title }}</td>
+                                <td class="col-4">{{ projet.content }}</td>
+                                <td class="col-2">{{ projet.path }}</td>
+                                <td class="col-2">
+                                    <a href="{{ path('admin.projet.edit', {id: projet.id }) }}" class="btn btn-sm btn-outline-primary"><i
+                                                class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <form method="post" action="{{ path('admin.projet.delete', {id: projet.id}) }}"
+                                          style="display: inline-block"
+                                          onsubmit="return confirm('Etes-vous sur de vouloir supprimer ces informations?')">
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ projet.id) }}">
+                                        <button class="btn btn-sm btn-outline-danger"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
                         </tbody>
                     </table>
                 </div>

@@ -31,7 +31,7 @@ class HomeController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    public function createHome(Request $request): Response
+    public function new(Request $request): Response
     {
         $home = new PortfolioHome();
         $form = $this->createForm(HomeType::class, $home);

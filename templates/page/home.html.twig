@@ -5,20 +5,22 @@
 <div id="home">
     {% for home in homes %}
     <div class="text-center padding-home-page">
-        {% if home.filename %}
-            <img class="img-fluid rounded-circle p-0"
-                 src="{{ vich_uploader_asset(home, 'imageFile') | imagine_filter('small') }}"
-                 alt="card-img-top">
-        {% else %}
-            <img class="img-fluid rounded pb-2"
-                 src="{{ 'image/no-image.png' | imagine_filter('small') }}"
-                 alt="card-img-top">
-        {% endif %}
+        <a href="{{ path('about.index') }}">
+            {% if home.filename %}
+                <img class="img-fluid rounded-circle p-0"
+                     src="{{ vich_uploader_asset(home, 'imageFile') | imagine_filter('small') }}"
+                     alt="card-img-top">
+            {% else %}
+                <img class="img-fluid rounded pb-2"
+                     src="{{ 'image/no-image.png' | imagine_filter('small') }}"
+                     alt="card-img-top">
+            {% endif %}
+        </a>
     </div>
     <div class="text-center pt-3">
         <h1>{{ home.title }}</h1>
         <h2>{{ home.content }}</h2>
-        <a class="btn btn-sm bg-blue text-white px-5" href="{{ path('download.file') }}">CV</a>
+        <a class="btn btn-sm bg-blue text-white px-5 my-3" href="{{ path('download.file') }}">CV</a>
     </div>
     {% endfor %}
 </div>

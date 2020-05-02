@@ -28,8 +28,8 @@ class AboutType extends AbstractType
             ])
             ->add('content_2', TextareaType::class, [
                 'required'   => false,
-            ])
-            ->add('file', TextType::class);
+            ]);
+
     }
 
     public function configureOptions(OptionsResolver $resolver)

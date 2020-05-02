@@ -17,8 +17,7 @@
                         <tr>
                             <th scope="col" class="col-2">Image</th>
                             <th scope="col" class="col-2">Titre</th>
-                            <th scope="col" class="col-4">Contenu</th>
-                            <th scope="col" class="col-2">Cv</th>
+                            <th scope="col" class="col-6">Contenu</th>
                             <th scope="col" class="col-2">
                                 <a href="{{ path('admin.home.create') }}" class="btn btn-sm btn-outline-success"
                                    title="Ajouter"><i class="fa fa-plus" aria-hidden="true"></i></a>
@@ -40,8 +39,7 @@
                                     {% endif %}
                                 </td>
                                 <td class="col-2">{{ home.title }}</td>
-                                <td class="col-4">{{ home.content }}</td>
-                                <td class="col-2">{{ home.file }}</td>
+                                <td class="col-6">{{ home.content }}</td>
                                 <td class="col-2">
                                     <a href="{{ path('admin.home.edit', {id: home.id }) }}" class="btn btn-sm btn-outline-primary"><i
                                                 class="fa fa-pencil" aria-hidden="true"></i></a>
@@ -91,8 +89,7 @@
                             <th scope="col" class="col-1">Titre</th>
                             <th scope="col" class="col-3">Contenu</th>
                             <th scope="col" class="col-3">Contenu 1</th>
-                            <th scope="col" class="col-2">Contenu 2</th>
-                            <th scope="col" class="col-1">Cv</th>
+                            <th scope="col" class="col-3">Contenu 2</th>
                             <th scope="col" class="col-1">
                                 <a href="{{ path('admin.about.create') }}" class="btn btn-sm btn-outline-success"
                                    title="Ajouter"><i class="fa fa-plus" aria-hidden="true"></i></a>
@@ -116,8 +113,7 @@
                                 <td class="col-1">{{ about.title }}</td>
                                 <td class="col-3 text-left">{{ about.content }}</td>
                                 <td class="col-3 text-left">{{ about.content1 }}</td>
-                                <td class="col-2 text-left">{{ about.content2 }}</td>
-                                <td class="col-1">{{ about.file }}</td>
+                                <td class="col-3 text-left">{{ about.content2 }}</td>
                                 <td class="col-1">
                                     <a href="{{ path('admin.about.edit', {id: about.id }) }}" class="btn btn-sm btn-outline-primary"><i
                                                 class="fa fa-pencil" aria-hidden="true"></i></a>

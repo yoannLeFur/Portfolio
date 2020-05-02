@@ -22,8 +22,7 @@ class HomeType extends AbstractType
                     'required' => false,
                 ])
             ->add('title', TextType::class)
-            ->add('content', TextareaType::class)
-            ->add('file', TextType::class);
+            ->add('content', TextareaType::class);
     }
 
     public function configureOptions(OptionsResolver $resolver)

@@ -44,7 +44,7 @@ class PortfolioHome
 
     /**
      * @var File|null
-     * @Assert\Image(mimeTypes="image/jpeg")
+     * @Assert\Image(mimeTypes={"image/jpeg", "image/jpg", "image/png"})
      * @Vich\UploadableField(mapping="home_image", fileNameProperty="filename")
      */
     private $imageFile;

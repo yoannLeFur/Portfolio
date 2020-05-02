@@ -164,7 +164,7 @@ li:hover {
 
 /* Home */
 #home {
-    background: url(../image/backgroundpc.jpeg) no-repeat;
+    background: url(../images/backgroundpc.jpeg) no-repeat;
     background-position: top 20% left 20%;
     background-size: cover;
     margin: 0;

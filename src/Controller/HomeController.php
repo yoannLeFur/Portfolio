@@ -18,15 +18,9 @@ class HomeController extends AbstractController
      */
     private $portfolioHomeRepository;
 
-    /**
-     * @var PortfolioAboutRepository
-     */
-    private $portfolioAboutRepository;
-
     public function __construct(PortfolioHomeRepository $portfolioHomeRepository, PortfolioAboutRepository $portfolioAboutRepository)
     {
         $this->portfolioHomeRepository = $portfolioHomeRepository;
-        $this->portfolioAboutRepository = $portfolioAboutRepository;
     }
 
     /**
@@ -36,10 +30,8 @@ class HomeController extends AbstractController
     public function index(): Response
     {
         $homes = $this->portfolioHomeRepository->findAll();
-        $abouts = $this->portfolioAboutRepository->findAll();
         return $this->render('page/home.html.twig', [
             "homes" => $homes,
-            "abouts" => $abouts
         ]);
     }
 
@@ -50,18 +42,6 @@ class HomeController extends AbstractController
         $response = new BinaryFileResponse('../public/download/CV-Yoann Le Fur.pdf');
         $response->setContentDisposition(ResponseHeaderBag::DISPOSITION_ATTACHMENT,'CV-Yoann Le Fur.pdf');
         return $response;
-    }
-
-    /**
-     * @Route(name="about.index",path="/présentation")
-     * @return Response
-     */
-    public function aboutIndex(): Response
-    {
-        $abouts = $this->portfolioAboutRepository->findAll();
-        return $this->render('page/about.html.twig', [
-            "abouts" => $abouts
-        ]);
     }
 
 }

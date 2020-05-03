@@ -65,7 +65,7 @@ class ExperienceController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->flush();
-            $this->addFlash('success', 'L\'experience a été modifiée avec succès');
+            $this->addFlash('primary', 'L\'experience a été modifiée avec succès');
             return $this->redirectToRoute('admin.index');
         }
 
@@ -87,7 +87,7 @@ class ExperienceController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($experience);
             $entityManager->flush();
-            $this->addFlash('success', 'L\'experience a bien été supprimée');
+            $this->addFlash('danger', 'L\'experience a bien été supprimée');
             return $this->redirectToRoute('admin.index');
         }
 

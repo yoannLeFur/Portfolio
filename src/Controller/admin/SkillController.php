@@ -65,7 +65,7 @@ class SkillController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->flush();
-            $this->addFlash('success', 'La compètence a été modifié avec succès');
+            $this->addFlash('priamry', 'La compètence a été modifié avec succès');
             return $this->redirectToRoute('admin.index');
         }
 
@@ -87,7 +87,7 @@ class SkillController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($skill);
             $entityManager->flush();
-            $this->addFlash('success', 'La compètence a bien été supprimé');
+            $this->addFlash('danger', 'La compètence a bien été supprimé');
             return $this->redirectToRoute('admin.index');
         }
 

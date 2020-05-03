@@ -2,18 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4592da2e-0f31-4e18-828e-0de22d9075ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/admin/SkillController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/SkillType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/skill/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/skill/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/Carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/AboutController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ProjetController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/page/projet.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/home/5ead4ec54dab0605693769.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/PortfolioHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PortfolioHome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AboutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AboutController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/admin/ExperienceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/ExperienceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/admin/FormationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/FormationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/admin/ProjetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/ProjetController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/admin/SkillController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/SkillController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/layout/nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/nav.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/page/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/forms.fr.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/translations/forms.fr.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,22 +157,22 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Form" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\images" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\js" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Form" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Controller\admin" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\image" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\images" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Controller\admin" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\image" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\translations" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Form" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Form" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Controller\admin" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\image" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\translations" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -191,7 +199,9 @@
       <updated>1588338167732</updated>
       <workItem from="1588338168901" duration="2491000" />
       <workItem from="1588364860513" duration="13671000" />
-      <workItem from="1588430307887" duration="21103000" />
+      <workItem from="1588430307887" duration="21493000" />
+      <workItem from="1588499244770" duration="3224000" />
+      <workItem from="1588524317785" duration="2565000" />
     </task>
     <servers />
   </component>

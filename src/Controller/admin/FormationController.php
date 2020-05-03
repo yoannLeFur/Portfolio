@@ -65,7 +65,7 @@ class FormationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->flush();
-            $this->addFlash('success', 'La formation a été modifiée avec succès');
+            $this->addFlash('primary', 'La formation a été modifiée avec succès');
             return $this->redirectToRoute('admin.index');
         }
 
@@ -87,7 +87,7 @@ class FormationController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($formation);
             $entityManager->flush();
-            $this->addFlash('success', 'La formation a bien été supprimée');
+            $this->addFlash('danger', 'La formation a bien été supprimée');
             return $this->redirectToRoute('admin.index');
         }
 

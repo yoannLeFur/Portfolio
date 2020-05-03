@@ -66,7 +66,7 @@ class ProjetController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->flush();
-            $this->addFlash('success', 'Le projet a été modifié avec succès');
+            $this->addFlash('primary', 'Le projet a été modifié avec succès');
             return $this->redirectToRoute('admin.index');
         }
 
@@ -88,7 +88,7 @@ class ProjetController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($projet);
             $entityManager->flush();
-            $this->addFlash('success', 'Le projet a bien été supprimé');
+            $this->addFlash('danger', 'Le projet a bien été supprimé');
             return $this->redirectToRoute('admin.index');
         }
 

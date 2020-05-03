@@ -65,7 +65,7 @@ class HomeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->flush();
-            $this->addFlash('success', 'Les informations ont bien étées modifier avec succès');
+            $this->addFlash('primary', 'Les informations ont bien étées modifier avec succès');
             return $this->redirectToRoute('admin.index');
         }
 
@@ -88,7 +88,7 @@ class HomeController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($home);
             $entityManager->flush();
-            $this->addFlash('success', 'Les informations ont bien étées supprimer');
+            $this->addFlash('danger', 'Les informations ont bien étées supprimer');
             return $this->redirectToRoute('admin.index');
         }
 

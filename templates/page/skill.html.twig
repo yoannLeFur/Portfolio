@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block title 'Portfolio > Compétences' %}
+
+{% block body %}
+    <div class="offset-0 col-12 offset-lg-4 col-lg-4 padding-projet">
+        <h2 class="text-center">Mes compétences</h2>
+    </div>
+    <div class="offset-0 col-12 offset-lg-1 col-lg-10">
+        <div id="carousel1">
+            {% for skill in skills %}
+                <div class="item mx-4">
+                    <div class="card-carrousel">
+                        <div class="card-body p-0">
+                            <div>
+                                {% if skill.filename %}
+                                    <img class="img-fluid rounded pb-2"
+                                         src="{{ vich_uploader_asset(skill, 'imageFile') | imagine_filter('medium') }}"
+                                         alt="card-img-top" style="width: 100%; height: auto;">
+                                {% else %}
+                                    <img class="img-fluid rounded pb-2"
+                                         src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
+                                         alt="card-img-top" style="width: 100%; height: auto;">
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="/js/Carousel.js"></script>
+{% endblock %}

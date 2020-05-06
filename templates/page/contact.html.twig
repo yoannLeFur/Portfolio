@@ -3,6 +3,31 @@
 
 {% block body %}
     <div class="offset-0 col-12 offset-lg-4 col-lg-4 padding-projet">
-        <h2 class="text-center">Me contacter</h2>
+        <h1 class="text-blue pb-4">Me contacter</h1>
+
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        {{ form_start(form) }}
+        <div class="row mt-2">
+            <div class="col-md-12">{{ form_row(form.lastname) }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">{{ form_row(form.firstname) }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">{{ form_row(form.email) }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">{{ form_row(form.content, { 'attr': {'rows': 6} }) }}</div>
+        </div>
+        {{ form_rest(form) }}
+        <div class="text-center">
+            <button class="btn btn-primary btn-lg">{{ button|default('Envoyer') }}</button>
+        </div
+        {{ form_end(form) }}
     </div>
 {% endblock %}

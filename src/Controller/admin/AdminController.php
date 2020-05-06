@@ -6,6 +6,7 @@ namespace App\Controller\admin;
 
 use App\Repository\PortfolioAboutRepository;
 use App\Repository\PortfolioAdminRepository;
+use App\Repository\PortfolioContactRepository;
 use App\Repository\PortfolioExperienceRepository;
 use App\Repository\PortfolioFormationRepository;
 use App\Repository\PortfolioHomeRepository;
@@ -52,13 +53,19 @@ class AdminController extends AbstractController
      */
     private $portfolioSkillRepository;
 
+    /**
+     * @var PortfolioContactRepository
+     */
+    private $portfolioContactRepository;
+
     public function __construct(PortfolioAdminRepository $portfolioAdminRepository,
                                 PortfolioHomeRepository $portfolioHomeRepository,
                                 PortfolioAboutRepository $portfolioAboutRepository,
                                 PortfolioProjetRepository $portfolioProjetRepository,
                                 PortfolioFormationRepository $portfolioFormationRepository,
                                 PortfolioExperienceRepository $portfolioExperienceRepository,
-                                PortfolioSkillRepository $portfolioSkillRepository)
+                                PortfolioSkillRepository $portfolioSkillRepository,
+                                PortfolioContactRepository $portfolioContactRepository)
     {
         $this->portfolioAdminRepository = $portfolioAdminRepository;
         $this->portfolioHomeRepository = $portfolioHomeRepository;
@@ -67,12 +74,13 @@ class AdminController extends AbstractController
         $this->portfolioFormationRepository = $portfolioFormationRepository;
         $this->portfolioExperienceRepository = $portfolioExperienceRepository;
         $this->portfolioSkillRepository = $portfolioSkillRepository;
+        $this->portfolioContactRepository = $portfolioContactRepository;
     }
 
     /**
- * @Route(name="admin.index",path="/administration")
- * @return Response
- */
+     * @Route(name="admin.index",path="/administration")
+     * @return Response
+     */
     public function index(): Response
     {
         $homes = $this->portfolioHomeRepository->findAll();
@@ -88,6 +96,18 @@ class AdminController extends AbstractController
             "projets" => $projets,
             "experiences" => $expriences,
             "skills" => $skills,
+        ]);
+    }
+
+    /**
+     * @Route(name="admin.contact",path="/administration/contact")
+     * @return Response
+     */
+    public function adminContact(): Response
+    {
+        $contacts = $this->portfolioContactRepository->findAll();
+        return $this->render('contact/adminContact.html.twig', [
+            "contacts" => $contacts,
         ]);
     }
 

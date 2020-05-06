@@ -36,6 +36,16 @@ class PortfolioContact
      */
     private $created_at;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $email;
+
+    public function __construct()
+    {
+        $this->setCreatedAt(new \DateTime());
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +95,18 @@ class PortfolioContact
     public function setCreatedAt(\DateTimeInterface $created_at): self
     {
         $this->created_at = $created_at;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
 
         return $this;
     }

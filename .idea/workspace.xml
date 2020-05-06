@@ -2,10 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4592da2e-0f31-4e18-828e-0de22d9075ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/page/contact.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/knp_paginator.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/Table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/admin/ContactController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Notification/ContactNotification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/contact/adminContact.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/emails/contact.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/knpPaginatorBundle.fr.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Portfolio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout/nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/nav.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/PortfolioContact.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PortfolioContact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/contact.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/forms.fr.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/translations/forms.fr.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,28 +156,32 @@
       <path value="$PROJECT_DIR$/vendor/imagine/imagine" />
       <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
       <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1bJ76VO7cQe77123E6ZBpbSfjmI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Controller" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\images" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\js" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Form" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Controller\admin" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\images" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Controller\admin" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\image" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\translations" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Form" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\js" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\translations" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\config\packages" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Controller\admin" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -185,7 +210,9 @@
       <workItem from="1588364860513" duration="13671000" />
       <workItem from="1588430307887" duration="21493000" />
       <workItem from="1588499244770" duration="3224000" />
-      <workItem from="1588524317785" duration="4182000" />
+      <workItem from="1588524317785" duration="4307000" />
+      <workItem from="1588783610318" duration="6453000" />
+      <workItem from="1588793815380" duration="5111000" />
     </task>
     <servers />
   </component>

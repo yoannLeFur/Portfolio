@@ -6,7 +6,6 @@ namespace App\Controller;
 
 use App\Entity\PortfolioHome;
 use App\Form\HomeType;
-use App\Repository\PortfolioAdminRepository;
 use App\Repository\PortfolioHomeRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,19 +14,14 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AdminController extends AbstractController
 {
-    /**
-     * @var PortfolioAdminRepository
-     */
-    private $portfolioAdminRepository;
 
     /**
      * @var PortfolioHomeRepository
      */
     private $portfolioHomeRepository;
 
-    public function __construct(PortfolioAdminRepository $portfolioAdminRepository, PortfolioHomeRepository $portfolioHomeRepository )
+    public function __construct(PortfolioHomeRepository $portfolioHomeRepository )
     {
-        $this->portfolioAdminRepository = $portfolioAdminRepository;
         $this->portfolioHomeRepository = $portfolioHomeRepository;
     }
 

@@ -7,11 +7,11 @@
             <div class="text-center padding-home-page">
                 {% if about.filename %}
                     <img class="img-fluid rounded-circle p-0"
-                         src="{{ vich_uploader_asset(about, 'imageFile') | imagine_filter('small') }}"
+                         src="{{ vich_uploader_asset(about, 'imageFile') | imagine_filter('smallPortrait') }}"
                          alt="card-img-top">
                 {% else %}
-                    <img class="img-fluid rounded pb-2"
-                         src="{{ 'images/no-image.png' | imagine_filter('small') }}"
+                    <img class="img-fluid rounded-circle p-0"
+                         src="{{ 'images/no-image.png' | imagine_filter('smallPortrait') }}"
                          alt="card-img-top">
                 {% endif %}
             </div>

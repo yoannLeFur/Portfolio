@@ -37,7 +37,7 @@ h3 {
 
 p {
     font-size: 20px;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 li:hover {
@@ -76,7 +76,10 @@ button:hover {
     padding: 30vh 0 0;
 }
 
-.padding-projet,
+.padding-projet {
+    padding: 15vh 0 5vh;
+}
+
 .padding-home-page {
     padding: 15vh 0 0;
 }
@@ -173,7 +176,6 @@ button:hover {
 
 .table-height-contact,
 .table-height-experience,
-
 .table-height-contact,
 .table-height-experience,
 .table-height-skill,
@@ -200,6 +202,42 @@ button:hover {
 .table-fixed thead > tr > th {
     float: left;
     position: relative;
+}
+
+.td-10 {
+    width: 10%;
+}
+
+.td-20 {
+    width: 20%;
+}
+
+.td-25 {
+    width: 25%;
+}
+
+.td-30 {
+    width: 30%;
+}
+
+.td-40 {
+    width: 40%;
+}
+
+.td-50 {
+    width: 50%;
+}
+
+.td-60 {
+    width: 60%;
+}
+
+.td-80 {
+    width: 80%;
+}
+
+.td-100 {
+    width: 100%;
 }
 
 .scrollbar-black::-webkit-scrollbar-track {
@@ -294,7 +332,7 @@ button:hover {
 }
 
 .dataTables_paginate .pagination {
-    margin: 0 10px 10px 0!important;
+    margin: 0 10px 10px 0 !important;
 }
 
 
@@ -316,6 +354,6 @@ button:hover {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     #home {
-             height: 100vh;
-         }
+        height: 100vh;
+    }
 }

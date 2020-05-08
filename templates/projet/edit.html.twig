@@ -20,7 +20,9 @@
         </div>
         {{ form_rest(form) }}
         <div class="text-center">
-            <button class="btn btn-primary btn-lg">{{ button|default('Editer') }}</button>
+            <button class="btn btn-primary btn-md">{{ button|default('Editer') }}</button>
+            <a href="{{ path('admin.index') }}" class="btn btn-secondary btn-md">Annuler</a>
+
         </div
         {{ form_end(form) }}
     </div>

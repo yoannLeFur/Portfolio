@@ -58,6 +58,10 @@ class Carousel {
         this.root.appendChild(prevButton);
         nextButton.addEventListener('click', this.next.bind(this));
         prevButton.addEventListener('click', this.prev.bind(this));
+        if (this.items.length <=2) {
+            nextButton.style.display = 'none';
+            prevButton.style.display = 'none';
+        }
         if(this.options.loop === true) {
             return;
         }
@@ -103,7 +107,7 @@ class Carousel {
             }
         }
 
-        let translateX = index * -100 / this.items.lengthl;
+        let translateX = index * -100 / this.items.length;
         this.container.style.transform = 'translate3d(' + translateX + '%,0 ,0)';
         this.currentItem = index;
         this.moveCallbacks.forEach(cb => cb(index))
@@ -144,16 +148,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     new Carousel(document.querySelector('#carousel1'), {
         slidesVisible: 2,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         timeout: 3000,
         loop: true
     });
-
-    // new Carousel(document.querySelector('#carousel2'), {
-    //     slidesVisible: 8,
-    //     slidesToScroll: 1,
-    //     timeout: 1000,
-    //     loop: true
-    // })
 
 });

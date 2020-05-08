@@ -3,7 +3,7 @@
 
 {% block body %}
     <div class="offset-0 col-12 offset-lg-4 col-lg-4 padding-projet">
-        <h2 class="text-center">Mes projets</h2>
+        <h1 class="text-blue pb-4">Mes projets</h1>
     </div>
     <div class="offset-0 col-12 offset-lg-1 col-lg-10">
         <div id="carousel1">
@@ -11,17 +11,16 @@
                 <div class="item mx-4">
                     <div class="card-carrousel">
                         <div class="card-body p-0">
-                            <a class="product-link"
-                               href="{{ projet.path }}">
+                            <a href="{{ projet.path }}">
                                 <div>
                                     {% if projet.filename %}
-                                        <img class="img-fluid rounded pb-2"
+                                        <img class="img-fluid"
                                              src="{{ vich_uploader_asset(projet, 'imageFile') | imagine_filter('medium') }}"
-                                             alt="card-img-top" style="width: 100%; height: auto;">
+                                             alt="card-img-top">
                                     {% else %}
-                                        <img class="img-fluid rounded pb-2"
+                                        <img class="img-fluid"
                                              src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
-                                             alt="card-img-top" style="width: 100%; height: auto;">
+                                             alt="card-img-top">
                                     {% endif %}
                                 </div>
                             </a>

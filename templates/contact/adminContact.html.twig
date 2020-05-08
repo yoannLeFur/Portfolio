@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="col-4">
-            <h1>Liste de vos emails</h1>
+            <h1 class="text-blue pb-4">Liste de vos emails</h1>
         </div>
     </div>
 
@@ -47,21 +47,19 @@
                     <table class="dataTable table table-striped table-borderless text-center bg-white m-0">
                         <thead>
                         <tr>
-                            <th>Nom</th>
-                            <th>Prénom</th>
-                            <th>Email</th>
-                            <th>message</th>
-                            <th></th>
+                            <th class="td-25">Nom</th>
+                            <th class="td-25">Prénom</th>
+                            <th class="td-30">Email</th>
+                            <th class="td-10"></th>
                         </tr>
                         </thead>
                         <tbody class="scrollbar scrollbar-black bordered-black square thin table-height-formation">
                         {% for contact in contacts %}
                             <tr>
-                                <td style="width:10%">{{ contact.lastname }}</td>
-                                <td style="width:10%">{{ contact.firstname }}</td>
-                                <td style="width:10%">{{ contact.email }}</td>
-                                <td style="width:60%">{{ contact.content }}</td>
-                                <td style="width:10%">
+                                <td class="td-25">{{ contact.lastname }}</td>
+                                <td class="td-25">{{ contact.firstname }}</td>
+                                <td class="td-30">{{ contact.email }}</td>
+                                <td class="td-10">
                                     <form method="post" action="{{ path('admin.contact.delete', {id: contact.id}) }}"
                                           style="display: inline-block"
                                           onsubmit="return confirm('Etes-vous sur de vouloir supprimer ces informations?')">
@@ -73,6 +71,9 @@
                                         </button>
                                     </form>
                                 </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="text-left"><strong>Message : </strong> {{ contact.content }}</td>
                             </tr>
                         {% endfor %}
                         </tbody>

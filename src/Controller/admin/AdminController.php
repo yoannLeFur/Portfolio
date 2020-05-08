@@ -7,6 +7,7 @@ namespace App\Controller\admin;
 use App\Repository\PortfolioAboutRepository;
 use App\Repository\PortfolioAdminRepository;
 use App\Repository\PortfolioContactRepository;
+use App\Repository\PortfolioEmailRepository;
 use App\Repository\PortfolioExperienceRepository;
 use App\Repository\PortfolioFormationRepository;
 use App\Repository\PortfolioHomeRepository;
@@ -58,6 +59,11 @@ class AdminController extends AbstractController
      */
     private $portfolioContactRepository;
 
+    /**
+     * @var PortfolioEmailRepository
+     */
+    private $portfolioEmailRepository;
+
     public function __construct(PortfolioAdminRepository $portfolioAdminRepository,
                                 PortfolioHomeRepository $portfolioHomeRepository,
                                 PortfolioAboutRepository $portfolioAboutRepository,
@@ -65,7 +71,8 @@ class AdminController extends AbstractController
                                 PortfolioFormationRepository $portfolioFormationRepository,
                                 PortfolioExperienceRepository $portfolioExperienceRepository,
                                 PortfolioSkillRepository $portfolioSkillRepository,
-                                PortfolioContactRepository $portfolioContactRepository)
+                                PortfolioContactRepository $portfolioContactRepository,
+                                PortfolioEmailRepository $portfolioEmailRepository)
     {
         $this->portfolioAdminRepository = $portfolioAdminRepository;
         $this->portfolioHomeRepository = $portfolioHomeRepository;
@@ -75,6 +82,7 @@ class AdminController extends AbstractController
         $this->portfolioExperienceRepository = $portfolioExperienceRepository;
         $this->portfolioSkillRepository = $portfolioSkillRepository;
         $this->portfolioContactRepository = $portfolioContactRepository;
+        $this->portfolioEmailRepository = $portfolioEmailRepository;
     }
 
     /**
@@ -89,6 +97,7 @@ class AdminController extends AbstractController
         $projets = $this->portfolioProjetRepository->findAll();
         $expriences = $this->portfolioExperienceRepository->findAll();
         $skills = $this->portfolioSkillRepository->findAll();
+        $contacts = $this->portfolioContactRepository->findAll();
         return $this->render('page/admin.html.twig', [
             "homes" => $homes,
             "abouts" => $abouts,
@@ -96,18 +105,19 @@ class AdminController extends AbstractController
             "projets" => $projets,
             "experiences" => $expriences,
             "skills" => $skills,
+            "contacts" => $contacts,
         ]);
     }
 
     /**
-     * @Route(name="admin.contact",path="/administration/contact")
+     * @Route(name="admin.email",path="/administration/email")
      * @return Response
      */
-    public function adminContact(): Response
+    public function adminEmail(): Response
     {
-        $contacts = $this->portfolioContactRepository->findAll();
-        return $this->render('contact/adminContact.html.twig', [
-            "contacts" => $contacts,
+        $emails = $this->portfolioEmailRepository->findAll();
+        return $this->render('emails/adminEmail.html.twig', [
+            "emails" => $emails,
         ]);
     }
 

@@ -54,18 +54,18 @@
                         </tr>
                         </thead>
                         <tbody class="scrollbar scrollbar-black bordered-black square thin table-height-formation">
-                        {% for contact in contacts %}
+                        {% for email in emails %}
                             <tr>
-                                <td class="td-25">{{ contact.lastname }}</td>
-                                <td class="td-25">{{ contact.firstname }}</td>
-                                <td class="td-30">{{ contact.email }}</td>
+                                <td class="td-25">{{ email.lastname }}</td>
+                                <td class="td-25">{{ email.firstname }}</td>
+                                <td class="td-30">{{ email.email }}</td>
                                 <td class="td-10">
-                                    <form method="post" action="{{ path('admin.contact.delete', {id: contact.id}) }}"
+                                    <form method="post" action="{{ path('admin.email.delete', {id: email.id}) }}"
                                           style="display: inline-block"
                                           onsubmit="return confirm('Etes-vous sur de vouloir supprimer ces informations?')">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token"
-                                               value="{{ csrf_token('delete' ~ contact.id) }}">
+                                               value="{{ csrf_token('delete' ~ email.id) }}">
                                         <button class="btn btn-sm btn-outline-danger"><i class="fa fa-trash-o"
                                                                                          aria-hidden="true"></i>
                                         </button>

@@ -95,7 +95,7 @@
                                     <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;">
                                         <h1>Demande de contact</h1>
                                         <p>
-                                            {{ contact.firstname }} {{ contact.lastname }} a visité votre portfolio. Un message vous a été envoyè.
+                                            {{ email.firstname }} {{ email.lastname }} a visité votre portfolio. Un message vous a été envoyè.
                                         </p>
                                     </div>
                                 </td>
@@ -129,15 +129,15 @@
                                            style="cellspacing:0;color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;">
                                         <tr>
                                             <td style="font-weight:bold;">Prénom</td>
-                                            <td>{{ contact.firstname }}</td>
+                                            <td>{{ email.firstname }}</td>
                                         </tr>
                                         <tr>
                                             <td style="font-weight:bold;">Nom</td>
-                                            <td>{{ contact.lastname }}</td>
+                                            <td>{{ email.lastname }}</td>
                                         </tr>
                                         <tr>
                                             <td style="font-weight:bold;">Email</td>
-                                            <td>{{ contact.email }}</td>
+                                            <td>{{ email.email }}</td>
                                         </tr>
                                     </table>
                                 </td>
@@ -145,7 +145,7 @@
                         </table>
                         <div>
                             <h3 style="font-weight:bold;">Message</h3>
-                            <p>{{ contact.content | nl2br }}</p>
+                            <p>{{ email.content | nl2br }}</p>
                         </div>
                     </div>
                     <!--[if mso | IE]></td></tr></table><![endif]--></td>

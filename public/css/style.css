@@ -37,7 +37,6 @@ h3 {
 
 p {
     font-size: 20px;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 li:hover {
@@ -53,6 +52,11 @@ button:hover {
 .bg-blue {
     background-color: #478BCA;
 }
+
+.bg-blue-transparent {
+    background-color: rgba(71,139,202, 0.5);
+}
+
 
 .text-blue {
     color: #478BCA;
@@ -80,6 +84,10 @@ button:hover {
     padding: 15vh 0 5vh;
 }
 
+.heigth-100{
+    height: 100vh;
+}
+
 .padding-home-page {
     padding: 15vh 0 0;
 }
@@ -95,7 +103,7 @@ button:hover {
 
 /* Home */
 #home {
-    background: url(../images/backgroundpc.jpeg) no-repeat;
+    background: url(../images/backgroundpc.jpg) no-repeat;
     background-position: top 20% left 20%;
     background-size: cover;
     margin: 0;
@@ -163,6 +171,36 @@ button:hover {
 .card-carrousel {
     border: none;
     margin: 0;
+}
+
+/* Contact */
+#contact {
+    background: url(../images/backgroundContact.jpg) no-repeat;
+    background-position: top 20% left 20%;
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact img {
+    display: flex;
+    justify-content: center;
+    border: 3px solid #478bca;
+    border-radius: 5px;
+    margin: 0 auto;
+    object-fit: cover;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: all 0.3s ease-in-out 0s;
+    box-shadow: 2px 2px 3px #000000;
+}
+
+#contact label {
+    color: #ffffff;
 }
 
 

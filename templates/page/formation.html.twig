@@ -3,30 +3,34 @@
 
 {% block body %}
     <div class="offset-0 col-12 offset-lg-4 col-lg-4 padding-projet">
-        <h2 class="text-center">Mes Formations</h2>
         <h1 class="text-blue pb-4">Mes formations</h1>
     </div>
     <div class="offset-0 col-12 offset-lg-1 col-lg-10">
         <div id="carousel1">
             {% for formation in formations %}
-                <div class="item mx-4">
-                    <div class="card-carrousel">
-                        <div class="card-body p-0">
-                            <a class="product-link"
-                               href="{{ formation.path }}">
-                                <div>
-                                    {% if formation.filename %}
-                                        <img class="img-fluid"
-                                             src="{{ vich_uploader_asset(formation, 'imageFile') | imagine_filter('medium') }}"
-                                             alt="card-img-top" style="width: 100%; height: auto;">
-                                    {% else %}
-                                        <img class="img-fluid"
-                                             src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
-                                             alt="card-img-top" style="width: 100%; height: auto;">
-                                    {% endif %}
-                                </div>
-                            </a>
+                <div>
+                    <div class="item mx-4">
+                        <div class="card-carrousel">
+                            <div class="card-body p-0">
+                                <a class="product-link"
+                                   href="{{ formation.path }}">
+                                    <div>
+                                        {% if formation.filename %}
+                                            <img class="img-fluid"
+                                                 src="{{ vich_uploader_asset(formation, 'imageFile') | imagine_filter('medium') }}"
+                                                 alt="card-img-top" style="width: 100%; height: auto;">
+                                        {% else %}
+                                            <img class="img-fluid"
+                                                 src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
+                                                 alt="card-img-top" style="width: 100%; height: auto;">
+                                        {% endif %}
+                                    </div>
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                    <div>
+                        <p class="text-center">{{ formation.content }} {{ formation.schooldate }}</p>
                     </div>
                 </div>
             {% endfor %}

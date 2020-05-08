@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block title 'Contact > création' %}
+
+{% block body %}
+    <div class="offset-0 col-12 offset-lg-4 col-lg-4 padding-home-page">
+        <h1 class="text-blue pb-4">Nouvelles informations</h1>
+
+        {{ form_start(form) }}
+        <div class="row">
+            <div class="col-md-12">{{ form_row(form.imageFile) }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">{{ form_row(form.email) }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">{{ form_row(form.phone) }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">{{ form_row(form.linkedinPath) }}</div>
+        </div>
+        {{ form_rest(form) }}
+        <div class="text-center">
+            <button class="btn btn-success btn-md">{{ button|default('Enregister') }}</button>
+            <a href="{{ path('admin.index') }}" class="btn btn-secondary btn-md">Annuler</a>
+        </div
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

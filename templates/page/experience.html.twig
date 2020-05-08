@@ -8,24 +8,30 @@
     <div class="offset-0 col-12 offset-lg-1 col-lg-10">
         <div id="carousel1">
             {% for experience in experiences %}
-                <div class="item mx-4">
-                    <div class="card-carrousel">
-                        <div class="card-body p-0">
-                            <a class="product-link"
-                               href="{{ experience.path }}">
-                                <div>
-                                    {% if experience.filename %}
-                                        <img class="img-fluid"
-                                             src="{{ vich_uploader_asset(experience, 'imageFile') | imagine_filter('medium') }}"
-                                             alt="card-img-top">
-                                    {% else %}
-                                        <img class="img-fluid"
-                                             src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
-                                             alt="card-img-top">
-                                    {% endif %}
-                                </div>
-                            </a>
+                <div>
+                    <div class="item mx-4">
+                        <div class="card-carrousel">
+                            <div class="card-body p-0">
+                                <a class="product-link"
+                                   href="{{ experience.path }}">
+                                    <div>
+                                        {% if experience.filename %}
+                                            <img class="img-fluid"
+                                                 src="{{ vich_uploader_asset(experience, 'imageFile') | imagine_filter('medium') }}"
+                                                 alt="card-img-top">
+                                        {% else %}
+                                            <img class="img-fluid"
+                                                 src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
+                                                 alt="card-img-top">
+                                        {% endif %}
+                                    </div>
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                    <div>
+                        <p class="text-center">{{ experience.content }}</p>
+                        <p class="text-center">{{ experience.experiencedate }}</p>
                     </div>
                 </div>
             {% endfor %}

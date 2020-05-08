@@ -8,23 +8,29 @@
     <div class="offset-0 col-12 offset-lg-1 col-lg-10">
         <div id="carousel1">
             {% for projet in projets %}
-                <div class="item mx-4">
-                    <div class="card-carrousel">
-                        <div class="card-body p-0">
-                            <a href="{{ projet.path }}">
-                                <div>
-                                    {% if projet.filename %}
-                                        <img class="img-fluid"
-                                             src="{{ vich_uploader_asset(projet, 'imageFile') | imagine_filter('medium') }}"
-                                             alt="card-img-top">
-                                    {% else %}
-                                        <img class="img-fluid"
-                                             src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
-                                             alt="card-img-top">
-                                    {% endif %}
-                                </div>
-                            </a>
+                <div>
+                    <div class="item mx-4">
+                        <div class="card-carrousel">
+                            <div class="card-body p-0">
+                                <a href="{{ projet.path }}">
+                                    <div>
+                                        {% if projet.filename %}
+                                            <img class="img-fluid"
+                                                 src="{{ vich_uploader_asset(projet, 'imageFile') | imagine_filter('medium') }}"
+                                                 alt="card-img-top">
+                                        {% else %}
+                                            <img class="img-fluid"
+                                                 src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
+                                                 alt="card-img-top">
+                                        {% endif %}
+                                    </div>
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                    <div>
+                        <h2 class="text-center text-blue">{{ projet.title }}</h2>
+                        <p class="text-center">{{ projet.content }}</p>
                     </div>
                 </div>
             {% endfor %}

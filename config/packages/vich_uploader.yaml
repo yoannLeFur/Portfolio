@@ -31,6 +31,12 @@ vich_uploader:
             uri_prefix: /images/experience
             upload_destination: '%kernel.project_dir%/public/images/experience'
             namer: Vich\UploaderBundle\Naming\UniqidNamer
+
+        contact_image:
+            uri_prefix: /images/contact
+            upload_destination: '%kernel.project_dir%/public/images/contact'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+
     #mappings:
     #    products:
     #        uri_prefix: /images/products

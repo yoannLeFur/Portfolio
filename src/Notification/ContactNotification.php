@@ -4,6 +4,7 @@ namespace App\Notification;
 
 use App\Entity\Contact;
 use App\Entity\PortfolioContact;
+use App\Entity\PortfolioEmail;
 use Twig\Environment;
 
 class ContactNotification {
@@ -23,14 +24,14 @@ class ContactNotification {
         $this->renderer = $renderer;
     }
 
-    public function notify(PortfolioContact $contact)
+    public function notify(PortfolioEmail $email)
     {
         $message = (new \Swift_Message('Portfolio'))
             ->setFrom('noreply@server.com')
             ->setTo('contact@yoannlefur.fr')
-            ->setReplyTo($contact->getEmail())
+            ->setReplyTo($email->getEmail())
             ->setBody($this->renderer->render('emails/contact.html.twig', [
-                'contact' => $contact
+                'email' => $email
             ]), 'text/html');
         $this->mailer->send($message);
     }

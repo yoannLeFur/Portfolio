@@ -4,12 +4,11 @@
 namespace App\Controller;
 
 
-use App\Entity\PortfolioContact;
-use App\Entity\PortfolioExperience;
-use App\Form\ContactType;
-use App\Form\ExperienceType;
+use App\Entity\PortfolioEmail;
+use App\Form\ContactEmailType;
 use App\Notification\ContactNotification;
 use App\Repository\PortfolioContactRepository;
+use App\Repository\PortfolioEmailRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -23,43 +22,44 @@ class ContactController extends AbstractController
      */
     private $portfolioContactRepository;
 
-    public function __construct(PortfolioContactRepository $portfolioContactRepository)
+    /**
+     * @var PortfolioEmailRepository
+     */
+    private $portfolioEmailRepository;
+
+    public function __construct(PortfolioContactRepository $portfolioContactRepository,
+                                PortfolioEmailRepository $portfolioEmailRepository)
     {
         $this->portfolioContactRepository = $portfolioContactRepository;
+        $this->portfolioEmailRepository = $portfolioEmailRepository;
     }
-
-//    /**
-//     * @Route(name="contact.index",path="/contact")
-//     * @return Response
-//     */
-//    public function contactIndex(): Response
-//    {
-//        return $this->render('page/contact.html.twig');
-//    }
 
 
     /**
      * @Route(name="contact.index",path="/contact")
      * @param Request $request
+     * @param ContactNotification $notification
      * @return Response
      */
     public function index(Request $request, ContactNotification $notification): Response
     {
-        $contact = new PortfolioContact();
-        $form = $this->createForm(ContactType::class, $contact);
+        $contacts = $this->portfolioContactRepository->findAll();
+        $email = new PortfolioEmail();
+        $form = $this->createForm(ContactEmailType::class, $email);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $notification->notify($contact);
+            $notification->notify($email);
             $em = $this->getDoctrine()->getManager();
-            $em->persist($contact);
+            $em->persist($email);
             $em->flush();
             $this->addFlash('success', 'Votre message à été envoyé avec succès');
             return $this->redirectToRoute('contact.index');
         }
 
         return $this->render('page/contact.html.twig', [
-            'contact' => $contact,
+            'contacts' => $contacts,
+            'email' => $email,
             'form' => $form->createView()
         ]);
     }

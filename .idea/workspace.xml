@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4592da2e-0f31-4e18-828e-0de22d9075ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/component/admin/_about.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/component/admin/_contact.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/component/admin/_experience.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/component/admin/_formation.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/component/admin/_home.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/component/admin/_projet.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/component/admin/_skill.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/Carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/PortfolioContact.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PortfolioContact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ContactType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/layout/nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/nav.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page/about.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/about.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/page/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/contact.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/translations/forms.fr.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/translations/forms.fr.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,19 +170,19 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../3wAcademy/Developpement/js/js4/29 - paint/paint" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\templates\component\admin" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\templates\component" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\templates" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\templates\emails" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\images" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Form" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Repository" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Entity" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\templates\emails" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\images" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Controller\admin" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\image" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\translations" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -221,7 +220,7 @@
       <workItem from="1589204170262" duration="626000" />
       <workItem from="1589387719361" duration="304000" />
       <workItem from="1589457854099" duration="15000" />
-      <workItem from="1590786318227" duration="340000" />
+      <workItem from="1590786318227" duration="8550000" />
     </task>
     <servers />
   </component>

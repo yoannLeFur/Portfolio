@@ -1,0 +1,45 @@
+<div class="row">
+    <a href="{{ path('admin.projet.create') }}" class="btn btn-md bg-success px-5 text-white"
+       title="Ajouter un nouveau projet"><i class="fa fa-plus pr-3" aria-hidden="true"></i>Nouveau projet</a>
+</div>
+
+<div class="row m-0">
+    {% for projet in projets %}
+        <div class="col-4 pt-4">
+            <div class="card shadow">
+                <div class="card-body text-center p-2">
+                    <h5 class="card-title text-blue m-0">{{ projet.title }}</h5>
+                </div>
+                {% if projet.filename %}
+                    <img class="img-fluid"
+                         src="{{ vich_uploader_asset(projet, 'imageFile') | imagine_filter('medium') }}"
+                         alt="card-img-top">
+                {% else %}
+                    <img class="img-fluid"
+                         src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
+                         alt="card-img-top">
+                {% endif %}
+                <div class="card-body bg-light">
+                    <p class="card-text">{{ projet.content }}</p>
+                    <p class="card-text"><small class="text-muted">{{ projet.path }}</small></p>
+                </div>
+                <div class="card-body text-right">
+                    <a href="{{ path('admin.projet.edit', {id: projet.id }) }}"
+                       class="btn btn-sm btn-outline-primary"><i
+                                class="fa fa-pencil" aria-hidden="true"></i></a>
+                    <form method="post" action="{{ path('admin.projet.delete', {id: projet.id}) }}"
+                          style="display: inline-block"
+                          onsubmit="return confirm('Etes-vous sur de vouloir supprimer ces informations?')">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token"
+                               value="{{ csrf_token('delete' ~ projet.id) }}">
+                        <button class="btn btn-sm btn-outline-danger"><i class="fa fa-trash-o"
+                                                                         aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+

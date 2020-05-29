@@ -39,8 +39,14 @@ p {
     font-size: 12px;
 }
 
-li:hover {
-    background-color: #A9A9A9;
+/*li:hover {*/
+/*    background-color: #A9A9A9;*/
+/*}*/
+
+.nav-pills .nav-link.active,
+.nav-pills a:hover {
+    background-color: #343A40!important;
+    color: #fff;
 }
 
 a:hover,
@@ -63,6 +69,10 @@ button:hover {
 
 .border-bottom-blue {
     border-bottom: 2px solid #478BCA;
+}
+
+.border-top-blue {
+    border-top: 2px solid #478BCA;
 }
 
 .shadow {

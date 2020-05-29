@@ -1,0 +1,52 @@
+<div class="col-12 p-0">
+    <div class="card shadow">
+        <div class="card-header font-weight-bold bg-white text-blue border-bottom-blue text-center px-3 py-2">
+            Compétences
+        </div>
+        <table class="dataTable table table-striped table-borderless text-center bg-white m-0">
+            <thead>
+            <tr>
+                <th class="td-10">Image</th>
+                <th class="td-80">Titre</th>
+                <th class="td-10">
+                    <a href="{{ path('admin.skill.create') }}" class="btn btn-sm btn-outline-success"
+                       title="Ajouter"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                </th>
+            </tr>
+            </thead>
+            <tbody class="scrollbar scrollbar-black bordered-black square thin table-height-skill">
+            {% for skill in skills %}
+                <tr>
+                    <td class="td-10">
+                        {% if skill.filename %}
+                            <img class="img-fluid"
+                                 src="{{ vich_uploader_asset(skill, 'imageFile') | imagine_filter('smallPaysage') }}"
+                                 alt="card-img-top">
+                        {% else %}
+                            <img class="img-fluid"
+                                 src="{{ 'images/no-image.png' | imagine_filter('smallPaysage') }}"
+                                 alt="card-img-top">
+                        {% endif %}
+                    </td>
+                    <td class="td-80">{{ skill.title }}</td>
+                    <td class="td-10">
+                        <a href="{{ path('admin.skill.edit', {id: skill.id }) }}"
+                           class="btn btn-sm btn-outline-primary"><i
+                                    class="fa fa-pencil" aria-hidden="true"></i></a>
+                        <form method="post" action="{{ path('admin.skill.delete', {id: skill.id}) }}"
+                              style="display: inline-block"
+                              onsubmit="return confirm('Etes-vous sur de vouloir supprimer ces informations?')">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token"
+                                   value="{{ csrf_token('delete' ~ skill.id) }}">
+                            <button class="btn btn-sm btn-outline-danger"><i class="fa fa-trash-o"
+                                                                             aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

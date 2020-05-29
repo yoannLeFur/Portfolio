@@ -1,0 +1,94 @@
+{#<div class="col-12 p-0">#}
+{#    <div class="card shadow ">#}
+{#        <div class="card-header font-weight-bold bg-white text-blue border-bottom-blue text-center px-3 py-2">#}
+{#            Home#}
+{#        </div>#}
+{#        <table class="table table-fixed table-borderless text-center bg-white m-0">#}
+{#            <thead>#}
+{#            <tr>#}
+{#                <th class="td-10">Image</th>#}
+{#                <th class="td-20">Titre</th>#}
+{#                <th class="td-60">contenu</th>#}
+{#                <th class="td-10">#}
+{#                    <a href="{{ path('admin.home.create') }}" class="btn btn-sm btn-outline-success"#}
+{#                       title="Ajouter"><i class="fa fa-plus" aria-hidden="true"></i></a>#}
+{#                </th>#}
+{#            </tr>#}
+{#            </thead>#}
+{#            <tbody>#}
+{#            {% for home in homes %}#}
+{#                <tr>#}
+{#                    <td class="td-10">#}
+{#                        {% if home.filename %}#}
+{#                            <img class="img-fluid"#}
+{#                                 src="{{ vich_uploader_asset(home, 'imageFile') | imagine_filter('portrait') }}"#}
+{#                                 alt="card-img-top">#}
+{#                        {% else %}#}
+{#                            <img class="img-fluid"#}
+{#                                 src="{{ 'images/no-image.png' | imagine_filter('portrait') }}"#}
+{#                                 alt="card-img-top">#}
+{#                        {% endif %}#}
+{#                    </td>#}
+{#                    <td class="td-20">{{ home.title }}</td>#}
+{#                    <td class="td-60">{{ home.content }}</td>#}
+{#                    <td class="td-10">#}
+{#                        <a href="{{ path('admin.home.edit', {id: home.id }) }}"#}
+{#                           class="btn btn-sm btn-outline-primary"><i#}
+{#                                    class="fa fa-pencil" aria-hidden="true"></i></a>#}
+{#                        <form method="post" action="{{ path('admin.home.delete', {id: home.id}) }}"#}
+{#                              style="display: inline-block"#}
+{#                              onsubmit="return confirm('Etes-vous sur de vouloir supprimer ces informations?')">#}
+{#                            <input type="hidden" name="_method" value="DELETE">#}
+{#                            <input type="hidden" name="_token"#}
+{#                                   value="{{ csrf_token('delete' ~ home.id) }}">#}
+{#                            <button class="btn btn-sm btn-outline-danger"><i class="fa fa-trash-o"#}
+{#                                                                             aria-hidden="true"></i>#}
+{#                            </button>#}
+{#                        </form>#}
+{#                    </td>#}
+
+{#                </tr>#}
+{#            {% endfor %}#}
+{#            </tbody>#}
+{#        </table>#}
+{#    </div>#}
+{#</div>#}
+
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters shadow">
+        {% for home in homes %}
+        <div class="col-md-4">
+            {% if home.filename %}
+                <img class="img-fluid"
+                     src="{{ vich_uploader_asset(home, 'imageFile') | imagine_filter('portrait') }}"
+                     alt="card-img-top">
+            {% else %}
+                <img class="img-fluid"
+                     src="{{ 'images/no-image.png' | imagine_filter('portrait') }}"
+                     alt="card-img-top">
+            {% endif %}
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <div class="text-right pb-2">
+                    <a href="{{ path('admin.home.edit', {id: home.id }) }}"
+                       class="btn btn-sm btn-outline-primary"><i
+                                class="fa fa-pencil" aria-hidden="true"></i></a>
+                    <form method="post" action="{{ path('admin.home.delete', {id: home.id}) }}"
+                          style="display: inline-block"
+                          onsubmit="return confirm('Etes-vous sur de vouloir supprimer ces informations?')">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token"
+                               value="{{ csrf_token('delete' ~ home.id) }}">
+                        <button class="btn btn-sm btn-outline-danger"><i class="fa fa-trash-o"
+                                                                         aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+                <h5 class="card-title">{{ home.title }}</h5>
+                <p class="card-text">{{ home.content }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

@@ -384,9 +384,10 @@
                         <thead>
                         <tr>
                             <th class="td-10">Image</th>
-                            <th class="td-30">Email</th>
+                            <th class="td-20">Email</th>
                             <th class="td-10">Téléphone</th>
-                            <th class="td-30">linkedIn</th>
+                            <th class="td-20">LinkedIn</th>
+                            <th class="td-20">GitHub</th>
                             <th class="td-10">
                                 <a href="{{ path('admin.contact.create') }}" class="btn btn-sm btn-outline-success"
                                    title="Ajouter"><i class="fa fa-plus" aria-hidden="true"></i></a>
@@ -407,9 +408,10 @@
                                              alt="card-img-top">
                                     {% endif %}
                                 </td>
-                                <td class="td-30">{{ contact.email }}</td>
+                                <td class="td-20">{{ contact.email }}</td>
                                 <td class="td-20">{{ contact.phone }}</td>
-                                <td class="td-30">{{ contact.linkedinPath }}</td>
+                                <td class="td-20">{{ contact.linkedinPath }}</td>
+                                <td class="td-20">{{ contact.githubPath }}</td>
                                 <td class="td-10">
                                     <a href="{{ path('admin.contact.edit', {id: contact.id }) }}"
                                        class="btn btn-sm btn-outline-primary"><i

@@ -22,6 +22,7 @@ class ContactType extends AbstractType
                 'required' => false,
             ])
             ->add('linkedinPath', TextType::class)
+            ->add('githubPath', TextType::class)
             ->add('phone', TextType::class)
             ->add('email', EmailType::class);
 

@@ -3,9 +3,11 @@
 
 {% block body %}
     <div id="contact">
+        <div class="offset-0 col-12 offset-lg-4 col-lg-4 padding-contact">
+            <h1 class="text-white">Me contacter</h1>
+        </div>
         <div class="row m-0">
-            <div class="col-6 padding-projet">
-                <h1 class="text-white pb-4">Me contacter</h1>
+            <div class="col-12 col-lg-6 contact-infos bg-black-transparent">
 
                 {% for message in app.flashes('success') %}
                     <div class="alert alert-success">
@@ -14,46 +16,38 @@
                 {% endfor %}
 
                 {% for contact in contacts %}
-                    <div class="text-center">
-                        <a href="{{ path('about.index') }}">
-                            {% if contact.filename %}
-                                <img class="img-fluid rounded p-0"
-                                     src="{{ vich_uploader_asset(contact, 'imageFile') | imagine_filter('smallPortrait') }}"
-                                     alt="card-img-top" style="width:20%; height: auto">
-                            {% else %}
-                                <img class="img-fluid rounded p-0"
-                                     src="{{ 'images/no-image.png' | imagine_filter('smallPortrait') }}"
-                                     alt="card-img-top" style="width:20%; height: auto">
-                            {% endif %}
-                        </a>
-                    </div>
-                    <div class="offset-4 col-6 text-left pt-5">
-                        <p class="text-white"><i class="fa fa-envelope px-2 py-2 mr-3 bg-blue"></i>{{ contact.email }}</p>
-                        <p  class="text-white"><i class="fa fa-phone px-2 py-2 mr-3 bg-blue"></i>{{ contact.phone }}</p>
-                        <a href="{{ contact.linkedinPath }}"  class="text-white"><i class="fa fa-linkedin px-2 py-2 mr-3 bg-blue"></i>LinkedIn</a>
+                    <div class="offset-1 col-10">
+                        <p class="text-white"><i class="fa fa-envelope px-2 py-2 mr-3 bg-blue"
+                                                 aria-hidden="true"></i>{{ contact.email }}</p>
+                        <p class="text-white"><i class="fa fa-phone px-2 py-2 mr-3 bg-blue"
+                                                 aria-hidden="true"></i>{{ contact.phone }}</p>
+                        <a href="{{ contact.linkedinPath }}" class="text-white pr-3 py-2"><i
+                                    class="fa fa-linkedin px-2 py-2 mr-3 bg-blue" aria-hidden="true"></i>LinkedIn</a>
+                        <a href="{{ contact.githubPath }}" class="text-white pr-3 py-2"><i
+                                    class="fa fa-github px-2 py-2 mr-3 bg-blue" aria-hidden="true"></i>GitHub</a>
                     </div>
                 {% endfor %}
             </div>
-            <div class="col-6 padding-projet heigth-100 bg-blue-transparent"
-
-            {{ form_start(form) }}
-            <div class="row mt-2 m-0">
-                <div class="offset-1 col-10 p-0">{{ form_row(form.lastname) }}</div>
+            <div class="col-12 col-lg-6 bg-black-transparent">
+                {{ form_start(form) }}
+                <div class="row mt-2 m-0">
+                    <div class="offset-1 col-10 p-0">{{ form_row(form.lastname) }}</div>
+                </div>
+                <div class="row m-0">
+                    <div class="offset-1 col-10 p-0">{{ form_row(form.firstname) }}</div>
+                </div>
+                <div class="row m-0">
+                    <div class="offset-1 col-10 p-0">{{ form_row(form.email) }}</div>
+                </div>
+                <div class="row m-0">
+                    <div class="offset-1 col-10 p-0">{{ form_row(form.content, { 'attr': {'rows': 6} }) }}</div>
+                </div>
+                {{ form_rest(form) }}
+                <div class="text-center">
+                    <button class="btn btn-primary btn-md">{{ button|default('Envoyer') }}</button>
+                </div
+                {{ form_end(form) }}
             </div>
-            <div class="row m-0">
-                <div class="offset-1 col-10 p-0">{{ form_row(form.firstname) }}</div>
-            </div>
-            <div class="row m-0">
-                <div class="offset-1 col-10 p-0">{{ form_row(form.email) }}</div>
-            </div>
-            <div class="row m-0">
-                <div class="offset-1 col-10 p-0">{{ form_row(form.content, { 'attr': {'rows': 6} }) }}</div>
-            </div>
-            {{ form_rest(form) }}
-            <div class="text-center">
-                <button class="btn btn-primary btn-md">{{ button|default('Envoyer') }}</button>
-            </div
-            {{ form_end(form) }}
         </div>
     </div>
 {% endblock %}

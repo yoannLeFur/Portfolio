@@ -58,10 +58,6 @@ class Carousel {
         this.root.appendChild(prevButton);
         nextButton.addEventListener('click', this.next.bind(this));
         prevButton.addEventListener('click', this.prev.bind(this));
-        if (this.items.length <=2) {
-            nextButton.style.display = 'none';
-            prevButton.style.display = 'none';
-        }
         if(this.options.loop === true) {
             return;
         }

@@ -59,6 +59,11 @@ class PortfolioContact
      */
     private $updated_at;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $githubPath;
+
 
     public function __construct()
     {
@@ -191,6 +196,18 @@ class PortfolioContact
     public function setUpdatedAt(\DateTimeInterface $updated_at): self
     {
         $this->updated_at = $updated_at;
+
+        return $this;
+    }
+
+    public function getGithubPath(): ?string
+    {
+        return $this->githubPath;
+    }
+
+    public function setGithubPath(?string $githubPath): self
+    {
+        $this->githubPath = $githubPath;
 
         return $this;
     }

@@ -2,6 +2,9 @@
 {% block title 'Portfolio > Présentation' %}
 
 {% block body %}
+    <div>
+        {{ include('layout/nav.html.twig') }}
+    </div>
     <div id="about">
         <div class="offset-0 col-12 offset-lg-2 col-lg-8">
             {% for about in abouts %}

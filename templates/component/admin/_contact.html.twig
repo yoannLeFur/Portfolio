@@ -1,47 +1,31 @@
-<div class="col-12 p-0">
-    <div class="card shadow ">
-        <div class="card-header font-weight-bold bg-white text-blue border-bottom-blue text-center px-3 py-2">
-            Contact
-        </div>
-        <table class="dataTable table table-striped table-borderless text-center bg-white m-0">
-            <thead>
-            <tr>
-                <th class="td-10">Image</th>
-                <th class="td-20">Email</th>
-                <th class="td-10">Téléphone</th>
-                <th class="td-20">LinkedIn</th>
-                <th class="td-20">GitHub</th>
-                <th class="td-10">
-                    <a href="{{ path('admin.contact.create') }}" class="btn btn-sm btn-outline-success"
-                       title="Ajouter"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                </th>
-            </tr>
-            </thead>
-            <tbody class="scrollbar scrollbar-black bordered-black square thin table-height-formation">
-            {% for contact in contacts %}
-                <tr>
-                    <td class="td-10">
-                        {% if contact.filename %}
-                            <img class="img-fluid"
-                                 src="{{ vich_uploader_asset(contact, 'imageFile') | imagine_filter('smallPortrait') }}"
-                                 alt="card-img-top">
-                        {% else %}
-                            <img class="img-fluid"
-                                 src="{{ 'images/no-image.png' | imagine_filter('smallPortrait') }}"
-                                 alt="card-img-top">
-                        {% endif %}
-                    </td>
-                    <td class="td-20">{{ contact.email }}</td>
-                    <td class="td-20">{{ contact.phone }}</td>
-                    <td class="td-20">{{ contact.linkedinPath }}</td>
-                    <td class="td-20">{{ contact.githubPath }}</td>
-                    <td class="td-10">
+<div class="row padding">
+    <a href="{{ path('admin.contact.create') }}" class="btn btn-md bg-success px-5 text-white"
+       title="Ajouter une nouvelle informations"><i class="fa fa-plus pr-3" aria-hidden="true"></i>Nouvelle information</a>
+</div>
+
+{% for contact in contacts %}
+    <div class="card my-5">
+        <div class="row no-gutters shadow">
+            <div class="col-md-2">
+                {% if contact.filename %}
+                    <img class="img-fluid"
+                         src="{{ vich_uploader_asset(contact, 'imageFile') | imagine_filter('smallPortrait') }}"
+                         alt="card-img-top">
+                {% else %}
+                    <img class="img-fluid"
+                         src="{{ 'images/no-image.png' | imagine_filter('smallPortrait') }}"
+                         alt="card-img-top">
+                {% endif %}
+            </div>
+            <div class="col-md-10">
+                <div class="card-body">
+                    <div class="text-right pb-2">
                         <a href="{{ path('admin.contact.edit', {id: contact.id }) }}"
                            class="btn btn-sm btn-outline-primary"><i
                                     class="fa fa-pencil" aria-hidden="true"></i></a>
                         <form method="post" action="{{ path('admin.contact.delete', {id: contact.id}) }}"
                               style="display: inline-block"
-                              onsubmit="return confirm('Etes-vous sur de vouloir supprimer cette formation?')">
+                              onsubmit="return confirm('Etes-vous sur de vouloir supprimer ces informations?')">
                             <input type="hidden" name="_method" value="DELETE">
                             <input type="hidden" name="_token"
                                    value="{{ csrf_token('delete' ~ contact.id) }}">
@@ -49,10 +33,13 @@
                                                                              aria-hidden="true"></i>
                             </button>
                         </form>
-                    </td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+                    </div>
+                    <h5 class="card-title">{{ contact.email }}</h5>
+                    <p class="card-text text-truncate">{{ contact.phone }}</p>
+                    <p class="card-text"><small class="text-muted">{{ contact.linkedinPath }}</small></p>
+                    <p class="card-text"><small class="text-muted">{{ contact.githubPath }}</small></p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+{% endfor %}

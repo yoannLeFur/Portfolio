@@ -1,41 +1,25 @@
-<div class="col-12 p-0">
-    <div class="card shadow">
-        <div class="card-header font-weight-bold bg-white text-blue border-bottom-blue text-center px-3 py-2">
-            Expériences
-        </div>
-        <table class="dataTable table table-striped table-borderless text-center bg-white m-0">
-            <thead>
-            <tr>
-                <th class="td-10">Logo</th>
-                <th class="td-20">Titre</th>
-                <th class="td-30">contenu</th>
-                <th class="td-10">date</th>
-                <th class="td-20">Url</th>
-                <th class="td-10">
-                    <a href="{{ path('admin.experience.create') }}" class="btn btn-sm btn-outline-success"
-                       title="Ajouter"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                </th>
-            </tr>
-            </thead>
-            <tbody class="scrollbar scrollbar-black bordered-black square thin table-height-experience">
-            {% for experience in experiences %}
-                <tr>
-                    <td class="td-10">
-                        {% if experience.filename %}
-                            <img class="img-fluid"
-                                 src="{{ vich_uploader_asset(experience, 'imageFile') | imagine_filter('medium') }}"
-                                 alt="card-img-top">
-                        {% else %}
-                            <img class="img-fluid"
-                                 src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
-                                 alt="card-img-top">
-                        {% endif %}
-                    </td>
-                    <td class="td-20">{{ experience.title }}</td>
-                    <td class="td-30">{{ experience.content }}</td>
-                    <td class="td-10">{{ experience.experiencedate }}</td>
-                    <td class="td-20">{{ experience.path }}</td>
-                    <td class="td-10">
+<div class="row padding">
+    <a href="{{ path('admin.experience.create') }}" class="btn btn-md bg-success px-5 text-white"
+       title="Ajouter une nouvelle expérience"><i class="fa fa-plus pr-3" aria-hidden="true"></i>Nouvelle expèrience</a>
+</div>
+
+{% for experience in experiences %}
+    <div class="card my-5">
+        <div class="row no-gutters shadow">
+            <div class="col-md-4">
+                {% if experience.filename %}
+                    <img class="img-fluid"
+                         src="{{ vich_uploader_asset(experience, 'imageFile') | imagine_filter('medium') }}"
+                         alt="card-img-top">
+                {% else %}
+                    <img class="img-fluid"
+                         src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
+                         alt="card-img-top">
+                {% endif %}
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <div class="text-right pb-2">
                         <a href="{{ path('admin.experience.edit', {id: experience.id }) }}"
                            class="btn btn-sm btn-outline-primary"><i
                                     class="fa fa-pencil" aria-hidden="true"></i></a>
@@ -49,10 +33,12 @@
                                                                              aria-hidden="true"></i>
                             </button>
                         </form>
-                    </td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+                    </div>
+                    <h5 class="card-title">{{ experience.title }}</h5>
+                    <p class="card-text text-truncate">{{ experience.content }}</p>
+                    <p class="card-text"><small class="text-muted">{{ experience.path }}</small><small class="text-muted float-right">{{ experience.experiencedate }}</small></p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+{% endfor %}

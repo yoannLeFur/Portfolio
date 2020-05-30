@@ -2,81 +2,71 @@
 {% block title 'Portfolio > Admin' %}
 
 {% block body %}
-{#    <div class="row m-0 padding-admin">#}
-{#        <div class="col-4"></div>#}
-{#        <div class="col-4">#}
-{#            <h1 class="text-blue pb-4">Administration</h1>#}
-{#        </div>#}
-{#        <div class="col-4">#}
-{#            <div class="offset-0 col-12 offset-lg-2 col-lg-8 text-right">#}
-{#                <a href="{{ path('admin.email') }}" class="btn btn-md bg-success px-5 text-white">Email<i#}
-{#                            class="fa fa-chevron-right pl-3" aria-hidden="true"></i></a>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-
-    <div class="row m-0 padding-admin">
-        <div class="offset-2 col-8">
-            {% for message in app.flashes('success') %}
-                <div class="alert alert-success">
-                    {{ message }}
-                </div>
-            {% endfor %}
-
-            {% for message in app.flashes('primary') %}
-                <div class="alert alert-primary">
-                    {{ message }}
-                </div>
-            {% endfor %}
-
-            {% for message in app.flashes('danger') %}
-                <div class="alert alert-danger">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-    <div class="row m-0 ">
-        <div class="col-12">
-            <ul class="nav nav-pills" id="myTab" role="tablist">
-                <li class="nav-item text-center" role="presentation" style="width: 12.5%">
+    <div class="row m-0">
+        <div class="col-12 px-0">
+            <ul class="nav nav-pills nav-fill bg-blue" id="myTab" role="tablist">
+                <li class="nav-item text-center" role="presentation">
+                    <a class="nav-link" href="{{ path('home.index') }}">Portfolio</a>
+                </li>
+                <li class="nav-item text-center" role="presentation" >
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#tab-home" role="tab"
                        aria-controls="tab-home" aria-selected="true">Accueil</a>
                 </li>
-                <li class="nav-item text-center" role="presentation" style="width: 12.5%">
+                <li class="nav-item text-center" role="presentation" >
                     <a class="nav-link" id="about-tab" data-toggle="tab" href="#tab-about" role="tab"
                        aria-controls="about"
                        aria-selected="false">About</a>
                 </li>
-                <li class="nav-item text-center" role="presentation" style="width: 12.5%">
+                <li class="nav-item text-center" role="presentation">
                     <a class="nav-link" id="experience-tab" data-toggle="tab" href="#tab-experience" role="tab"
                        aria-controls="experience" aria-selected="false">Expériences</a>
                 </li>
-                <li class="nav-item text-center" role="presentation" style="width: 12.5%">
+                <li class="nav-item text-center" role="presentation">
                     <a class="nav-link" id="projet-tab" data-toggle="tab" href="#tab-projet" role="tab"
                        aria-controls="projet"
                        aria-selected="false">Projets</a>
                 </li>
-                <li class="nav-item text-center" role="presentation" style="width: 12.5%">
+                <li class="nav-item text-center" role="presentation" >
                     <a class="nav-link" id="skill-tab" data-toggle="tab" href="#tab-skill" role="tab"
                        aria-controls="skill"
                        aria-selected="false">Compétences</a>
                 </li>
-                <li class="nav-item text-center" role="presentation" style="width: 12.5%">
+                <li class="nav-item text-center" role="presentation">
                     <a class="nav-link" id="formation-tab" data-toggle="tab" href="#tab-formation" role="tab"
                        aria-controls="formation" aria-selected="false">Formations</a>
                 </li>
-                <li class="nav-item text-center" role="presentation" style="width: 12.5%">
+                <li class="nav-item text-center" role="presentation">
                     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#tab-contact" role="tab"
                        aria-controls="contact" aria-selected="false">Contact</a>
                 </li>
-                <li class="nav-item text-center" role="presentation" style="width: 12.5%">
+                <li class="nav-item text-center" role="presentation">
                     <a class="nav-link" id="email-tab" data-toggle="tab" href="#tab-email" role="tab"
                        aria-controls="email"
                        aria-selected="false">E-mail</a>
                 </li>
             </ul>
-            <div class="tab-content padding" id="myTabContent">
+            <div class="row m-0 mt-3">
+                <div class="offset-2 col-8">
+                    {% for message in app.flashes('success') %}
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+
+                    {% for message in app.flashes('primary') %}
+                        <div class="alert alert-primary">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+
+                    {% for message in app.flashes('danger') %}
+                        <div class="alert alert-danger">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="tab-content padding-tab-body-admin" id="myTabContent">
                 <div class="tab-pane fade show active" id="tab-home" role="tabpanel" aria-labelledby="accueil-tab">
                     {{ include('component/admin/_home.html.twig') }}
                 </div>
@@ -99,7 +89,7 @@
                     {{ include('component/admin/_contact.html.twig') }}
                 </div>
                 <div class="tab-pane fade" id="tab-email" role="tabpanel" aria-labelledby="email-tab">
-
+                    {{ include('component/admin/_email.html.twig') }}
                 </div>
             </div>
         </div>

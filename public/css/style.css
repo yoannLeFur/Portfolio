@@ -43,9 +43,14 @@ p {
 /*    background-color: #A9A9A9;*/
 /*}*/
 
+.nav-pills a {
+    color: #fff;
+}
+
 .nav-pills .nav-link.active,
 .nav-pills a:hover {
-    background-color: #343A40!important;
+    background-color: #A9A9A9!important;
+    border-radius: 0;
     color: #fff;
 }
 
@@ -85,6 +90,10 @@ button:hover {
     padding: 5vh 5% 0;
 }
 
+.padding-tab-body-admin {
+    padding: 0 5%;
+}
+
 .padding-login {
     padding: 30vh 0 0;
 }
@@ -92,9 +101,6 @@ button:hover {
 .padding-projet {
     padding: 15vh 0 5vh;
 }
-
-
-
 
 .padding-register {
     padding: 20vh 0 0;
@@ -235,7 +241,7 @@ button:hover {
 }
 
 .item {
-    margin: 40px 10px;
+    margin: 0 10px;
     background-color: #ffffff;
     box-shadow: 0 15px 35px #3232321a, 0 5px 15px #0000001a;
     transition: transform 0.3s;
@@ -359,6 +365,12 @@ button:hover {
 
 .carousel {
     position: relative;
+}
+
+.carousel:focus,
+.carousel__container:focus,
+#carousel1:focus {
+    border: none;
 }
 
 .carousel__container {

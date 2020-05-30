@@ -2,6 +2,9 @@
 {% block title 'Portfolio > Projet' %}
 
 {% block body %}
+    <div>
+        {{ include('layout/nav.html.twig') }}
+    </div>
     <div class="offset-0 col-12 offset-lg-4 col-lg-4 padding-projet">
         <h1 class="text-blue pb-4">Mes projets</h1>
     </div>
@@ -12,25 +15,43 @@
                     <div class="item mx-4">
                         <div class="card-carrousel">
                             <div class="card-body p-0">
-                                <a href="{{ projet.path }}">
-                                    <div>
-                                        {% if projet.filename %}
-                                            <img class="img-fluid"
-                                                 src="{{ vich_uploader_asset(projet, 'imageFile') | imagine_filter('medium') }}"
-                                                 alt="card-img-top">
-                                        {% else %}
-                                            <img class="img-fluid"
-                                                 src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
-                                                 alt="card-img-top">
-                                        {% endif %}
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="tab-left" role="tabpanel" aria-labelledby="left-tab">
+                                        <a href="{{ projet.path }}">
+                                            <div>
+                                                {% if projet.filename %}
+                                                    <img class="img-fluid"
+                                                         src="{{ vich_uploader_asset(projet, 'imageFile') | imagine_filter('medium') }}"
+                                                         alt="card-img-top">
+                                                {% else %}
+                                                    <img class="img-fluid"
+                                                         src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
+                                                         alt="card-img-top">
+                                                {% endif %}
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
+{#                                    <div class="tab-pane fade" id="tab-right" role="tabpanel" aria-labelledby="right-tab">#}
+{#                                    </div>#}
+                                </div>
                             </div>
+                            <div class="card-footer" style="height: 130px;">
+                                <h2 class="text-center text-blue">{{ projet.title }}</h2>
+                                <p class="text-center">{{ projet.content }}</p>
+                            </div>
+{#                            <div class="card-footer d-flex justify-content-end">#}
+{#                                <ul class="nav nav-pills nav-fill bg-blue col-3 p-0" id="myTab" role="tablist">#}
+{#                                    <li class="nav-item text-center" role="presentation">#}
+{#                                        <a class="nav-link active" id="left-tab" data-toggle="tab" href="#tab-left" role="tab"#}
+{#                                           aria-controls="tab-left" aria-selected="true"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>#}
+{#                                    </li>#}
+{#                                    <li class="nav-item text-center" role="presentation">#}
+{#                                        <a class="nav-link" id="right-tab" data-toggle="tab" href="#tab-right" role="tab"#}
+{#                                           aria-controls="tab-right" aria-selected="true"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>#}
+{#                                    </li>#}
+{#                                </ul>#}
+{#                            </div>#}
                         </div>
-                    </div>
-                    <div>
-                        <h2 class="text-center text-blue">{{ projet.title }}</h2>
-                        <p class="text-center">{{ projet.content }}</p>
                     </div>
                 </div>
             {% endfor %}

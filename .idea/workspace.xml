@@ -2,28 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4592da2e-0f31-4e18-828e-0de22d9075ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/component/admin/_email.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/modal/contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/home/5ed7df31b7950297964820.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/projet/5ed383765c3a1957662953.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/component/modal/__contact_modal.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Portfolio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/home/5eb492cbdbe91903959790.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/BackgroundContact.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/BackgroundContact.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/backgroundpc.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/backgroundpc.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/empty.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/empty.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/home/5ed28a4a2607b685139087.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/left.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/left.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/right.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/right.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/cache/medium/images/home/5eacb8c470bde422652387.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/cache/medium/images/home/5eacbbc22565f835170758.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/cache/small/images/home/5ead42950b316765288207.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/cache/small/images/home/5ead4ec54dab0605693769.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/cache/thumb/images/home/5eacb8c470bde422652387.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/cache/thumb/images/home/5eacbbc22565f835170758.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/cache/thumb/images/home/5ead42950b316765288207.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/component/admin/_about.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/component/admin/_about.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/component/admin/_contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/component/admin/_contact.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/component/admin/_experience.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/component/admin/_experience.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/component/admin/_formation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/component/admin/_formation.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/component/admin/_home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/component/admin/_home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/component/admin/_projet.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/component/admin/_projet.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/component/admin/_skill.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/component/admin/_skill.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page/about.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/about.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/contact.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page/experience.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/experience.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page/formation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/formation.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page/projet.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/projet.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page/skill.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/skill.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout/nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/nav.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,6 +180,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1bJ76VO7cQe77123E6ZBpbSfjmI" />
@@ -178,22 +188,23 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../3wAcademy/Developpement/js/js4/29 - paint/paint" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\assets" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\assets\js" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\assets\css" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\assets\js\modal" />
+      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\assets\images" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\templates\component\admin" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\templates\component" />
       <recent name="C:\wamp64\www\projets\GitHub\Portfolio\templates" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\templates\emails" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\images" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\images" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Form" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Repository" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\src\Entity" />
-      <recent name="C:\wamp64\www\projets\GitHub\Portfolio\public\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -234,6 +245,10 @@
       <workItem from="1590786318227" duration="8893000" />
       <workItem from="1590847800979" duration="11798000" />
       <workItem from="1590878993257" duration="2291000" />
+      <workItem from="1590919851911" duration="651000" />
+      <workItem from="1591185019438" duration="1160000" />
+      <workItem from="1591203106874" duration="6459000" />
+      <workItem from="1591219828493" duration="2651000" />
     </task>
     <servers />
   </component>
@@ -264,6 +279,11 @@
           <url>file://$PROJECT_DIR$/templates/component/admin/_projet.html.twig</url>
           <line>8</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/base.html.twig</url>
+          <line>49</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

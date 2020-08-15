@@ -2,15 +2,18 @@
 {% block title 'Portfolio > Projet' %}
 
 {% block body %}
+    <div>
+        {{ include('layout/nav.html.twig') }}
+    </div>
     <div class="offset-0 col-12 offset-lg-4 col-lg-4 padding-projet">
         <h1 class="text-blue pb-4">Mes projets</h1>
     </div>
-    <div class="offset-0 col-12 offset-lg-1 col-lg-10">
-        <div id="carousel1">
-            {% for projet in projets %}
-                <div>
-                    <div class="item mx-4">
-                        <div class="card-carrousel">
+    <div class="row m-0 mx-5 px-5">
+        {% for projet in projets %}
+            <div class="col-6 pt-3">
+                <div class="card shadow">
+                    <div class="row no-gutters shadow">
+                        <div class="col-12">
                             <div class="card-body p-0">
                                 <a href="{{ projet.path }}">
                                     <div>
@@ -26,15 +29,50 @@
                                     </div>
                                 </a>
                             </div>
+                            <div class="card-body p-0">
+                                <h2 class="text-center text-blue">{{ projet.title }}</h2>
+                                <p class="text-center">{{ projet.content }}</p>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <h2 class="text-center text-blue">{{ projet.title }}</h2>
-                        <p class="text-center">{{ projet.content }}</p>
-                    </div>
                 </div>
-            {% endfor %}
-        </div>
+            </div>
+        {% endfor %}
     </div>
-    <script src="/js/Carousel.js"></script>
+{#    <div class="offset-0 col-12 offset-lg-1 col-lg-10">#}
+{#        <div id="carousel">#}
+{#            {% for projet in projets %}#}
+{#                <div>#}
+{#                    <div class="item mx-4">#}
+{#                        <div class="card">#}
+{#                            <div class="card-body p-0">#}
+{#                                <div class="tab-content" id="myTabContent">#}
+{#                                    <div class="tab-pane fade show active" id="tab-left" role="tabpanel" aria-labelledby="left-tab">#}
+{#                                        <a href="{{ projet.path }}">#}
+{#                                            <div>#}
+{#                                                {% if projet.filename %}#}
+{#                                                    <img class="img-fluid"#}
+{#                                                         src="{{ vich_uploader_asset(projet, 'imageFile') | imagine_filter('medium') }}"#}
+{#                                                         alt="card-img-top">#}
+{#                                                {% else %}#}
+{#                                                    <img class="img-fluid"#}
+{#                                                         src="{{ 'images/no-image.png' | imagine_filter('medium') }}"#}
+{#                                                         alt="card-img-top">#}
+{#                                                {% endif %}#}
+{#                                            </div>#}
+{#                                        </a>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="card-footer" style="height: 130px;">#}
+{#                                <h2 class="text-center text-blue">{{ projet.title }}</h2>#}
+{#                                <p class="text-center">{{ projet.content }}</p>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+{#    <script src="/js/Carousel.js"></script>#}
 {% endblock %}

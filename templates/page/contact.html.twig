@@ -2,48 +2,52 @@
 {% block title 'Portfolio > Contact' %}
 
 {% block body %}
-    <div id="contact">
-        <div class="offset-0 col-12 offset-lg-4 col-lg-4 padding-contact">
-            <h1 class="text-white">Me contacter</h1>
-        </div>
+    <div>
+        {{ include('layout/nav.html.twig') }}
+    </div>
+    <div class="col-12 padding-contact">
+        <h2 class="text-blue pb-4">Me contacter</h2>
+    </div>
+    <div class="offset-0 col-12 offset-lg-1 col-lg-10">
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+
         <div class="row m-0">
-            <div class="col-12 col-lg-6 contact-infos bg-black-transparent">
-
-                {% for message in app.flashes('success') %}
-                    <div class="alert alert-success">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-
+            <div class="col-12 col-lg-6">
                 {% for contact in contacts %}
-                    <div class="offset-1 col-10">
-                        <p class="text-white"><i class="fa fa-envelope px-2 py-2 mr-3 bg-blue"
-                                                 aria-hidden="true"></i>{{ contact.email }}</p>
-                        <p class="text-white"><i class="fa fa-phone px-2 py-2 mr-3 bg-blue"
-                                                 aria-hidden="true"></i>{{ contact.phone }}</p>
-                        <a href="{{ contact.linkedinPath }}" class="text-white pr-3 py-2"><i
-                                    class="fa fa-linkedin px-2 py-2 mr-3 bg-blue" aria-hidden="true"></i>LinkedIn</a>
-                        <a href="{{ contact.githubPath }}" class="text-white pr-3 py-2"><i
-                                    class="fa fa-github px-2 py-2 mr-3 bg-blue" aria-hidden="true"></i>GitHub</a>
+                    <div class="text-center">
+                        {% if contact.filename %}
+                            <img class="img-fluid shadow p-0"
+                                 src="{{ vich_uploader_asset(contact, 'imageFile') | imagine_filter('smallPortrait') }}"
+                                 alt="card-img-top">
+                        {% else %}
+                            <img class="img-fluid rounded-circle p-0"
+                                 src="{{ 'images/no-image.png' | imagine_filter('smallPortrait') }}"
+                                 alt="card-img-top">
+                        {% endif %}
                     </div>
                 {% endfor %}
             </div>
-            <div class="col-12 col-lg-6 bg-black-transparent">
+            <div class="col-12 col-lg-6">
                 {{ form_start(form) }}
                 <div class="row mt-2 m-0">
-                    <div class="offset-1 col-10 p-0">{{ form_row(form.lastname) }}</div>
+                    <div class="col-12 col-md-6 p-0 pr-md-2">{{ form_row(form.lastname) }}</div>
+                    <div class="col-12 col-md-6 p-0 pl-md-2">{{ form_row(form.firstname) }}</div>
                 </div>
                 <div class="row m-0">
-                    <div class="offset-1 col-10 p-0">{{ form_row(form.firstname) }}</div>
+                    <div class="offset- col-12 p-0">{{ form_row(form.email) }}</div>
                 </div>
                 <div class="row m-0">
-                    <div class="offset-1 col-10 p-0">{{ form_row(form.email) }}</div>
+                    <div class="offset- col-12 p-0">{{ form_row(form.objet) }}</div>
                 </div>
                 <div class="row m-0">
-                    <div class="offset-1 col-10 p-0">{{ form_row(form.content, { 'attr': {'rows': 6} }) }}</div>
+                    <div class="offset-0 col-12 p-0">{{ form_row(form.content, { 'attr': {'rows': 6} }) }}</div>
                 </div>
                 {{ form_rest(form) }}
-                <div class="text-center">
+                <div class="text-center pb-3">
                     <button class="btn btn-primary btn-md">{{ button|default('Envoyer') }}</button>
                 </div
                 {{ form_end(form) }}

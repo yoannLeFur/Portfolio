@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block title 'Portfolio > Email' %}
+
+{% block body %}
+    <div>
+        {{ include('layout/nav.html.twig') }}
+    </div>
+    <div class="row m-0 padding-email">
+        <div class="col-3">
+            <a href="{{ path('admin.index') }}" class="btn btn-md bg-danger px-5 text-white"
+               title="Ajouter une nouvelle description"><i class="fa fa-chevron-left pr-3" aria-hidden="true"></i>retour</a>
+        </div>
+        <div class="col-6">
+            <h1 class="text-blue pb-4">Visualisation de l'email n° {{ email.id }}</h1>
+        </div>
+    </div>
+    <div class="offset-3 col-6">
+        <p><strong>Nom: </strong>{{ email.lastname }} {{ email.firstname }}</p>
+        <p><strong>E-mail: </strong>{{ email.email }}</p>
+        <p><strong>Objet: </strong>{{ email.objet }}</p>
+        <p><strong>Message: </strong></p>
+        <p>{{ email.content }}</p>
+    </div>
+{% endblock %}

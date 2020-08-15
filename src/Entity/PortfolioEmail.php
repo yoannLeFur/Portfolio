@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Cocur\Slugify\Slugify;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -25,6 +26,11 @@ class PortfolioEmail
      * @ORM\Column(type="string", length=255)
      */
     private $firstname;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $objet;
 
     /**
      * @ORM\Column(type="text")
@@ -110,4 +116,29 @@ class PortfolioEmail
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getObjet()
+    {
+        return $this->objet;
+    }
+
+    /**
+     * @param mixed $objet
+     * @return PortfolioEmail
+     */
+    public function setObjet($objet)
+    {
+        $this->objet = $objet;
+        return $this;
+    }
+
+    public function getSlug(): string
+    {
+        return (new Slugify())->slugify($this->objet);
+    }
+
+
 }

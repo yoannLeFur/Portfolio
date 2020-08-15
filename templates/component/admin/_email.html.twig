@@ -1,0 +1,48 @@
+<div class="padding">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow">
+                <div class="card-header font-weight-bold bg-white text-blue border-bottom-blue text-center px-3 py-2">
+                    Contact
+                </div>
+                <table class="email-font-size dataTable table table-striped table-borderless text-center bg-white m-0">
+                    <thead>
+                    <tr>
+                        <th class="td-10">Nom</th>
+                        <th class="td-10">Prénom</th>
+                        <th class="td-10">Email</th>
+                        <th class="td-20">objet</th>
+                        <th class="td-40">message</th>
+                        <th class="td-10"></th>
+                    </tr>
+                    </thead>
+                    <tbody class="scrollbar scrollbar-black bordered-black square thin table-height-formation">
+                    {% for email in emails %}
+                        <tr>
+                            <td class="td-10">{{ email.lastname }}</td>
+                            <td class="td-10">{{ email.firstname }}</td>
+                            <td class="td-10">{{ email.email }}</td>
+                            <td class="td-20">{{ email.objet }}</td>
+                            <td class="td-40 text-truncate" style="max-width: 150px;">{{ email.content }}</td>
+                            <td class="td-10">
+                                <a href="{{ path('admin.email.show', {id: email.id, slug: email.slug}) }}" class="btn btn-sm btn-outline-primary"><i
+                                            class="fa fa-eye" aria-hidden="true"></i></a>
+                                <form method="post" action="{{ path('admin.email.delete', {id: email.id}) }}"
+                                      style="display: inline-block"
+                                      onsubmit="return confirm('Etes-vous sur de vouloir supprimer ces informations?')">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input type="hidden" name="_token"
+                                           value="{{ csrf_token('delete' ~ email.id) }}">
+                                    <button class="btn btn-sm btn-outline-danger"><i class="fa fa-trash-o"
+                                                                                     aria-hidden="true"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

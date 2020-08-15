@@ -98,6 +98,7 @@ class AdminController extends AbstractController
         $expriences = $this->portfolioExperienceRepository->findAll();
         $skills = $this->portfolioSkillRepository->findAll();
         $contacts = $this->portfolioContactRepository->findAll();
+        $emails = $this->portfolioEmailRepository->findAll();
         return $this->render('page/admin.html.twig', [
             "homes" => $homes,
             "abouts" => $abouts,
@@ -106,19 +107,20 @@ class AdminController extends AbstractController
             "experiences" => $expriences,
             "skills" => $skills,
             "contacts" => $contacts,
-        ]);
-    }
-
-    /**
-     * @Route(name="admin.email",path="/administration/email")
-     * @return Response
-     */
-    public function adminEmail(): Response
-    {
-        $emails = $this->portfolioEmailRepository->findAll();
-        return $this->render('emails/adminEmail.html.twig', [
             "emails" => $emails,
         ]);
     }
+
+//    /**
+//     * @Route(name="admin.email",path="/administration/email")
+//     * @return Response
+//     */
+//    public function adminEmail(): Response
+//    {
+//        $emails = $this->portfolioEmailRepository->findAll();
+//        return $this->render('emails/adminEmail.html.twig', [
+//            "emails" => $emails,
+//        ]);
+//    }
 
 }

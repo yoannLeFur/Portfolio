@@ -1,0 +1,68 @@
+<div class="row padding">
+    <a href="{{ path('admin.about.create') }}" class="btn btn-md bg-success px-5 text-white"
+       title="Ajouter une nouvelle description"><i class="fa fa-plus pr-3" aria-hidden="true"></i>Nouvelle description</a>
+</div>
+
+{% for about in abouts %}
+    <div class="card my-5">
+        <div class="row no-gutters shadow">
+            <div class="col-md-3">
+                {% if about.filename %}
+                    <img class="img-fluid"
+                         src="{{ vich_uploader_asset(about, 'imageFile') | imagine_filter('portrait') }}"
+                         alt="card-img-top">
+                {% else %}
+                    <img class="img-fluid"
+                         src="{{ 'images/no-image.png' | imagine_filter('portrait') }}"
+                         alt="card-img-top">
+                {% endif %}
+            </div>
+            <div class="col-md-9">
+                <div class="card-body">
+                    <div class="text-right pb-2">
+                        <a data-target="{{ path('admin.about.edit', {id: about.id }) }}" data-tooltip="voir"
+                           class="modal-trigger btn btn-sm btn-outline-primary"
+                           href="#modal1"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+{#                        <a data-toggle="modal" data-target="#modal1" href="{{ path('admin.about.edit', {id: about.id }) }}"#}
+{#                           class="btn btn-sm btn-outline-primary"><i#}
+{#                                    class="fa fa-pencil" aria-hidden="true"></i></a>#}
+                        <form method="post" action="{{ path('admin.about.delete', {id: about.id}) }}"
+                              style="display: inline-block"
+                              onsubmit="return confirm('Etes-vous sur de vouloir supprimer ces informations?')">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token"
+                                   value="{{ csrf_token('delete' ~ about.id) }}">
+                            <button class="btn btn-sm btn-outline-danger"><i class="fa fa-trash-o"
+                                                                             aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <h5 class="card-title">{{ about.title }}</h5>
+                    <div class="overflow-auto">
+                        {{ about.content }}
+                        {{ about.content1 }}
+                        {{ about.content2 }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title text-blue" id="myModalLabel">Edition de la description</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body" id="getCode">
+
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>

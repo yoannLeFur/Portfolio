@@ -25,6 +25,9 @@ class ContactEmailType extends AbstractType
             ->add('email', EmailType::class, [
                 'required' => true,
             ])
+            ->add('objet', TextType::class, [
+                'required' => true,
+            ])
             ->add('content', TextareaType::class, [
                 'required' => true,
             ]);

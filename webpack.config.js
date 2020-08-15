@@ -33,7 +33,7 @@ Encore
     .addEntry('app_js', './assets/js/app.js')
     .addEntry('carousel_js', './assets/js/Carousel.js')
     .addEntry('table_js', './assets/js/Table.js')
-    .addEntry('contact_modal_js', './assets/js/modal/contact.js')
+    .addEntry('about_modal', './assets/js/about-modal.js')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 

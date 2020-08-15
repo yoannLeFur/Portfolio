@@ -43,13 +43,6 @@
             <li class="nav-item">
                 <a class="nav-link px-3" href="{{ path('contact.index') }}">Contact</a>
             </li>
-            <li class="nav-item">
-{#                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Contact</button>#}
-                <a href="#modal" data-target="{{ path('contact.index') }}" data-toggle="modal" class="btn-block">Contact</a>
-{#                <a data-target="{{ path('contact.index') }}" data-tooltip="voir"#}
-{#                   class="tooltipped modal-trigger btn right-align"#}
-{#                   href="#modal1">Contact</a>#}
-            </li>
         </ul>
     </div>
     <div class="navbarNav collapse navbar-collapse navbarSupportedContent">
@@ -74,18 +67,5 @@
             </li>
         </ul>
         {% endif %}
-    </div>
-</div>
-
-<div class="modal fade bd-example-modal-lg" id="modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                Contact
-            </div>
-            <div class="modal-body">
-
-            </div>
-        </div>
     </div>
 </div>

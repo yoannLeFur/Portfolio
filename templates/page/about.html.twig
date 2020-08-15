@@ -8,7 +8,7 @@
     <div id="about">
         <div class="offset-0 col-12 offset-lg-2 col-lg-8">
             {% for about in abouts %}
-                <div class="text-center padding-about-page">
+                <div class="text-center padding-email">
                     {% if about.filename %}
                         <img class="img-fluid rounded-circle p-0"
                              src="{{ vich_uploader_asset(about, 'imageFile') | imagine_filter('smallPortrait') }}"

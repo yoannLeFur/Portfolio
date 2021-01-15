@@ -9,11 +9,11 @@
             <div class="col-md-2">
                 {% if contact.filename %}
                     <img class="img-fluid"
-                         src="{{ vich_uploader_asset(contact, 'imageFile') | imagine_filter('smallPortrait') }}"
+                         src="{{ vich_uploader_asset(contact, 'imageFile') | imagine_filter('recPortrait') }}"
                          alt="card-img-top">
                 {% else %}
                     <img class="img-fluid"
-                         src="{{ 'images/no-image.png' | imagine_filter('smallPortrait') }}"
+                         src="{{ 'images/no-image.png' | imagine_filter('recPortrait') }}"
                          alt="card-img-top">
                 {% endif %}
             </div>

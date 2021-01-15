@@ -3,11 +3,16 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="navbarNav collapse navbar-collapse navbarSupportedContent">
+    <div class="navbarNav collapse navbar-collapse">
         {% if app.user %}
             <ul class="navbar-nav ">
                 <li class="nav-item">
                     <a class="nav-link px-3" href="{{ path('logout') }}"><i class="fa fa-sign-out fa-rotate-180" aria-hidden="true" ></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="{{ path('admin.index') }}">
+                        Bonjour, {{ app.user.fullname }}
+                    </a>
                 </li>
             </ul>
         {% endif %}
@@ -17,10 +22,18 @@
                     <a href="{{ path('login') }}"
                        class="nav-link px-3"><i class="fa fa-user"></i></a>
                 </li>
+                <li class="nav-item">
+                    <a href="https://www.linkedin.com/in/yoann-le-fur-86249a15b/"
+                       class="nav-link px-3"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://github.com/yoannLeFur"
+                       class="nav-link px-3"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
             </ul>
         {% endif %}
     </div>
-    <div class="navbarNav collapse navbar-collapse navbarSupportedContent">
+    <div class="navbarNav1 collapse navbar-collapse navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link px-3" href="{{ path('home.index') }}">Accueil</a>
@@ -44,28 +57,5 @@
                 <a class="nav-link px-3" href="{{ path('contact.index') }}">Contact</a>
             </li>
         </ul>
-    </div>
-    <div class="navbarNav collapse navbar-collapse navbarSupportedContent">
-        {% if app.user %}
-            <ul class="navbar-nav ">
-                <li class="nav-item">
-                    <a class="nav-link px-3" href="{{ path('admin.index') }}">
-                        Bonjour, {{ app.user.fullname }}
-                    </a>
-                </li>
-            </ul>
-        {% endif %}
-        {% if not app.user %}
-        <ul class="navbar-nav ">
-            <li class="nav-item">
-                <a href="https://www.linkedin.com/in/yoann-le-fur-86249a15b/"
-                   class="nav-link px-3"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            </li>
-            <li class="nav-item">
-                <a href="https://github.com/yoannLeFur"
-                   class="nav-link px-3"><i class="fa fa-github" aria-hidden="true"></i></a>
-            </li>
-        </ul>
-        {% endif %}
     </div>
 </div>

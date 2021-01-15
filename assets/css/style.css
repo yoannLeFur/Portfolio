@@ -54,7 +54,7 @@ p {
 
 .nav-pills .nav-link.active,
 .nav-pills a:hover {
-    background-color: #A9A9A9!important;
+    background-color: #A9A9A9 !important;
     border-radius: 0;
     color: #fff;
 }
@@ -67,6 +67,10 @@ button:hover {
 .btn-blue,
 .bg-blue {
     background-color: #478BCA;
+}
+
+.btn-sm {
+    font-size: 12px!important;
 }
 
 .bg-black-transparent {
@@ -104,7 +108,7 @@ button:hover {
 }
 
 .padding-projet {
-    padding: 15vh 0 5vh;
+    padding: 6vh 0 0;
 }
 
 .padding-register {
@@ -271,6 +275,10 @@ button:hover {
         padding: 15vh 10% 0;
     }
 
+    .padding-projet {
+        padding: 15vh 0 5vh;
+    }
+
     #about img {
         width: 150px;
     }
@@ -333,6 +341,11 @@ button:hover {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .navbarNav1 {
+        display: flex;
+        justify-content: flex-end;
+    }
+
     #home img {
         width: 250px;
     }

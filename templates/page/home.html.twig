@@ -11,11 +11,11 @@
                 <a href="{{ path('about.index') }}">
                     {% if home.filename %}
                         <img class="img-fluid rounded-circle p-0"
-                             src="{{ vich_uploader_asset(home, 'imageFile') | imagine_filter('portrait') }}"
+                             src="{{ vich_uploader_asset(home, 'imageFile') | imagine_filter('squarePortrait') }}"
                              alt="card-img-top">
                     {% else %}
                         <img class="img-fluid rounded-circle p-0"
-                             src="{{ 'images/no-image.png' | imagine_filter('portrait') }}"
+                             src="{{ 'images/no-image.png' | imagine_filter('squarePortrait') }}"
                              alt="card-img-top">
                     {% endif %}
                 </a>

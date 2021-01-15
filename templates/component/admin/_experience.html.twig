@@ -9,11 +9,11 @@
             <div class="col-md-4">
                 {% if experience.filename %}
                     <img class="img-fluid"
-                         src="{{ vich_uploader_asset(experience, 'imageFile') | imagine_filter('medium') }}"
+                         src="{{ vich_uploader_asset(experience, 'imageFile') | imagine_filter('paysage') }}"
                          alt="card-img-top">
                 {% else %}
                     <img class="img-fluid"
-                         src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
+                         src="{{ 'images/no-image.png' | imagine_filter('paysage') }}"
                          alt="card-img-top">
                 {% endif %}
             </div>
@@ -35,8 +35,8 @@
                         </form>
                     </div>
                     <h5 class="card-title">{{ experience.title }}</h5>
-                    <p class="card-text text-truncate">{{ experience.content }}</p>
-                    <p class="card-text"><small class="text-muted">{{ experience.path }}</small><small class="text-muted float-right">{{ experience.experiencedate }}</small></p>
+                    <p class="card-text text-truncate m-0">{{ experience.content }}</p>
+                    <p class="card-text m-0"><small class="text-muted">{{ experience.path }}</small><small class="text-muted float-right">{{ experience.experiencedate }}</small></p>
                 </div>
             </div>
         </div>

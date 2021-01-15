@@ -11,11 +11,11 @@
                 <div class="text-center padding-email">
                     {% if about.filename %}
                         <img class="img-fluid rounded-circle p-0"
-                             src="{{ vich_uploader_asset(about, 'imageFile') | imagine_filter('smallPortrait') }}"
+                             src="{{ vich_uploader_asset(about, 'imageFile') | imagine_filter('squarePortrait') }}"
                              alt="card-img-top">
                     {% else %}
                         <img class="img-fluid rounded-circle p-0"
-                             src="{{ 'images/no-image.png' | imagine_filter('smallPortrait') }}"
+                             src="{{ 'images/no-image.png' | imagine_filter('squarePortrait') }}"
                              alt="card-img-top">
                     {% endif %}
                 </div>

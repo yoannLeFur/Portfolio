@@ -8,28 +8,29 @@
     <div class="offset-0 col-12 offset-lg-4 col-lg-4 padding-projet">
         <h1 class="text-blue pb-4">Mes compétences</h1>
     </div>
-    <div class="offset-0 col-12 offset-lg-1 col-lg-10">
-        <div id="carousel1">
-            {% for skill in skills %}
-                <div class="item mx-4">
-                    <div class="card-carrousel">
-                        <div class="card-body p-0">
-                            <div>
-                                {% if skill.filename %}
-                                    <img class="img-fluid"
-                                         src="{{ vich_uploader_asset(skill, 'imageFile') | imagine_filter('medium') }}"
-                                         alt="card-img-top">
-                                {% else %}
-                                    <img class="img-fluid"
-                                         src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
-                                         alt="card-img-top">
-                                {% endif %}
+    <div class="row m-0 mx-md-5 px-md-5">
+        {% for skill in skills %}
+            <div class="col-12 col-md-6 py-2">
+                <div class="card shadow m-0">
+                    <div class="row no-gutters shadow">
+                        <div class="col-12">
+                            <div class="card-body p-0">
+                                <div>
+                                    {% if skill.filename %}
+                                        <img class="img-fluid"
+                                             src="{{ vich_uploader_asset(skill, 'imageFile') | imagine_filter('paysage') }}"
+                                             alt="card-img-top">
+                                    {% else %}
+                                        <img class="img-fluid"
+                                             src="{{ 'images/no-image.png' | imagine_filter('paysage') }}"
+                                             alt="card-img-top">
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            {% endfor %}
-        </div>
+            </div>
+        {% endfor %}
     </div>
-    <script src="/js/Carousel.js"></script>
 {% endblock %}

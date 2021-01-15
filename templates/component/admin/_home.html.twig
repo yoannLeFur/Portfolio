@@ -6,18 +6,18 @@
 {% for home in homes %}
     <div class="card my-5">
         <div class="row no-gutters shadow">
-            <div class="col-md-3">
+            <div class="col-12 col-sm-6 col-md-3">
                 {% if home.filename %}
                     <img class="img-fluid"
-                         src="{{ vich_uploader_asset(home, 'imageFile') | imagine_filter('portrait') }}"
+                         src="{{ vich_uploader_asset(home, 'imageFile') | imagine_filter('squarePortrait') }}"
                          alt="card-img-top">
                 {% else %}
                     <img class="img-fluid"
-                         src="{{ 'images/no-image.png' | imagine_filter('portrait') }}"
+                         src="{{ 'images/no-image.png' | imagine_filter('squarePortrait') }}"
                          alt="card-img-top">
                 {% endif %}
             </div>
-            <div class="col-md-9">
+            <div class="col-12 col-sm-6 col-md-9">
                 <div class="card-body">
                     <div class="text-right pb-2">
                         <a href="{{ path('admin.home.edit', {id: home.id }) }}"

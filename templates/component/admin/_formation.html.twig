@@ -9,11 +9,11 @@
             <div class="col-md-4">
                 {% if formation.filename %}
                     <img class="img-fluid"
-                         src="{{ vich_uploader_asset(formation, 'imageFile') | imagine_filter('medium') }}"
+                         src="{{ vich_uploader_asset(formation, 'imageFile') | imagine_filter('paysage') }}"
                          alt="card-img-top">
                 {% else %}
                     <img class="img-fluid"
-                         src="{{ 'images/no-image.png' | imagine_filter('medium') }}"
+                         src="{{ 'images/no-image.png' | imagine_filter('paysage') }}"
                          alt="card-img-top">
                 {% endif %}
             </div>
